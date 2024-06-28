@@ -26,6 +26,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 
                 _connString = builder.ConnectionString;
                 _conn = new SqlConnection(_connString);
+                _conn.Open();
                 return true;
             }
             catch (Exception ex)
@@ -38,14 +39,10 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 
         public static DataTable GetThongTinDangTuyen()
         {
-            _conn.Open();
-
             DataTable dt = new DataTable();
             string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
             SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
             sda.Fill(dt);
-
-            _conn.Close();
             return dt;
         }
     }
