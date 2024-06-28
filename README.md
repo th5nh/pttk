@@ -1,2 +1,2 @@
-# pttk
+PHÂN TÍCH THIẾT KẾ TRONG HỆ THỐNG THÔNG TIN
 ĐỒ ÁN CUỐI KỲ PTTK HTTT
