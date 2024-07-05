@@ -63,7 +63,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
                 }
                 else
                 {
-                    MessageBox.Show("Đăng ký thất bại.", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đăng ký thất bại (Mã ứng viên đã tồn tại).", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

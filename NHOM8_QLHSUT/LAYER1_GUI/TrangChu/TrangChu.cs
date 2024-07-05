@@ -37,7 +37,10 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh
 
         private void btn_phieudkut_Click(object sender, EventArgs e)
         {
-
+            GhiNhanPhieuUngTuyen_L1 ghiPDKUT = new GhiNhanPhieuUngTuyen_L1();
+            Hide();
+            ghiPDKUT.ShowDialog();
+            Close();
         }
     }
 }

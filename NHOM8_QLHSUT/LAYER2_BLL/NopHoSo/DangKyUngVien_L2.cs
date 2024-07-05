@@ -56,6 +56,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.NopHoSo
         {
             try
             {
+                strMaUV = strMaUV.Trim();
                 if (string.IsNullOrEmpty(strMaUV))
                 {
                     return false;
@@ -74,6 +75,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.NopHoSo
         {
             try
             {
+                strEmail = strEmail.Trim();
                 if (string.IsNullOrEmpty(strEmail))
                 {
                     return false;
