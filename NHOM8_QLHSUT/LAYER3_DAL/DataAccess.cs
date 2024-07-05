@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace NHOM8_QLHSUT.LAYER3_DAL
@@ -37,13 +38,36 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             }
         }
 
-        public static DataTable GetThongTinDangTuyen()
+        public static DataTable LayThongTinDangTuyen()
         {
             DataTable dt = new DataTable();
             string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
             SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
             sda.Fill(dt);
             return dt;
+        }
+
+        public static bool ThemUngVien(string mauv, string hoten, string ngaysinh, string diachi, string sdt, string email, string manv)
+        {
+            try
+            {
+                string query = "INSERT INTO UNGVIEN(MaUV, HoTen, NgaySinh, DiaChi, SoDienThoai, MaNV) " +
+                    "VALUES (@MAUV, @HOTEN, @NGAYSINH, @DIACHI, @SDT, @MANV)";
+                SqlCommand cmd = new SqlCommand(query, _conn);
+                cmd.Parameters.AddWithValue("@MAUV", mauv);
+                cmd.Parameters.AddWithValue("@HOTEN", hoten);
+                cmd.Parameters.AddWithValue("@NGAYSINH", ngaysinh);
+                cmd.Parameters.AddWithValue("@DIACHI", diachi);
+                cmd.Parameters.AddWithValue("@SDT", sdt);
+                cmd.Parameters.AddWithValue("@MANV", manv);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex) 
+            { 
+                Console.WriteLine(ex.ToString());
+                return false;
+            } 
         }
     }
 }

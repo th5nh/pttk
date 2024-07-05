@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER2_BLL.NopHoSo;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
+using NHOM8_QLHSUT.LAYER2_BLL.NopHoSo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,21 +12,29 @@ using System.Windows.Forms;
 
 namespace NHOM8_QLHSUT
 {
-    public partial class NopHoSo_L1 : Form
+    public partial class XemTTDT_L1 : Form
     {
-        public NopHoSo_L1()
+        public XemTTDT_L1()
         {
             InitializeComponent();
         }
 
         private void NopHoSo_L1_Load(object sender, EventArgs e)
         {
-            DataTable dt = NopHoSo_L2.ThongTinDangTuyen();
+            DataTable dt = XemTTDT_L2.ThongTinDangTuyen();
 
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView1.Rows.Add(dr.ItemArray);
             }
+        }
+
+        private void btn_trangchu_Click(object sender, EventArgs e)
+        {
+            TrangChu trangchu = new TrangChu();
+            Hide();
+            trangchu.ShowDialog();
+            Close();
         }
     }
 }

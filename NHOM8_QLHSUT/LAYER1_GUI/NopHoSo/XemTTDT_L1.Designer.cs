@@ -1,6 +1,6 @@
 ﻿namespace NHOM8_QLHSUT
 {
-    partial class NopHoSo_L1
+    partial class XemTTDT_L1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VITRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_trangchu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,14 +110,28 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Test - Thông tin đăng tuyển";
             // 
-            // NopHoSo_L1
+            // btn_trangchu
+            // 
+            this.btn_trangchu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_trangchu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_trangchu.Location = new System.Drawing.Point(325, 419);
+            this.btn_trangchu.Name = "btn_trangchu";
+            this.btn_trangchu.Size = new System.Drawing.Size(149, 43);
+            this.btn_trangchu.TabIndex = 17;
+            this.btn_trangchu.Text = "Trang chủ";
+            this.btn_trangchu.UseVisualStyleBackColor = false;
+            this.btn_trangchu.Click += new System.EventHandler(this.btn_trangchu_Click);
+            // 
+            // XemTTDT_L1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 451);
+            this.ClientSize = new System.Drawing.Size(814, 485);
+            this.Controls.Add(this.btn_trangchu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "NopHoSo_L1";
+            this.Name = "XemTTDT_L1";
             this.Text = "NOPHOSOTestThông tin đăng tuyển";
             this.Load += new System.EventHandler(this.NopHoSo_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -133,6 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn YEUCAU;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn VITRI;
+        private System.Windows.Forms.Button btn_trangchu;
     }
 }
 

@@ -46,18 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.cs">
+    <Compile Include="LAYER1_GUI\TrangChu\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.Designer.cs">
-      <DependentUpon>NopHoSo_L1.cs</DependentUpon>
+    <Compile Include="LAYER1_GUI\TrangChu\TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+    <Compile Include="LAYER1_GUI\NopHoSo\DangKyUngVien_L1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\NopHoSo\DangKyUngVien_L1.Designer.cs">
+      <DependentUpon>DangKyUngVien_L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER1_GUI\NopHoSo\XemTTDT_L1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\NopHoSo\XemTTDT_L1.Designer.cs">
+      <DependentUpon>XemTTDT_L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER2_BLL\NopHoSo\DangKyUngVien_L2.cs" />
+    <Compile Include="LAYER2_BLL\NopHoSo\XemTTDT_L2.cs" />
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">
-      <DependentUpon>NopHoSo_L1.cs</DependentUpon>
+    <EmbeddedResource Include="LAYER1_GUI\TrangChu\TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\NopHoSo\DangKyUngVien_L1.resx">
+      <DependentUpon>DangKyUngVien_L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\NopHoSo\XemTTDT_L1.resx">
+      <DependentUpon>XemTTDT_L1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
