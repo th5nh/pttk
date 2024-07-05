@@ -30,13 +30,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_trangchu = new System.Windows.Forms.Button();
             this.MADT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.YEUCAU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VITRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_trangchu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.YEUCAU,
             this.SOLUONG,
             this.VITRI});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 79);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -68,10 +69,34 @@
             this.dataGridView1.Size = new System.Drawing.Size(757, 328);
             this.dataGridView1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(412, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Danh Sách Thông Tin Đăng Tuyển";
+            // 
+            // btn_trangchu
+            // 
+            this.btn_trangchu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_trangchu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_trangchu.Location = new System.Drawing.Point(325, 423);
+            this.btn_trangchu.Name = "btn_trangchu";
+            this.btn_trangchu.Size = new System.Drawing.Size(149, 43);
+            this.btn_trangchu.TabIndex = 17;
+            this.btn_trangchu.Text = "Trang chủ";
+            this.btn_trangchu.UseVisualStyleBackColor = false;
+            this.btn_trangchu.Click += new System.EventHandler(this.btn_trangchu_Click);
+            // 
             // MADT
             // 
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MADT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MADT.FillWeight = 90F;
             this.MADT.HeaderText = "Mã DT";
             this.MADT.MinimumWidth = 6;
             this.MADT.Name = "MADT";
@@ -87,6 +112,9 @@
             // 
             // SOLUONG
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SOLUONG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SOLUONG.FillWeight = 90F;
             this.SOLUONG.HeaderText = "Số lượng";
             this.SOLUONG.MinimumWidth = 6;
             this.SOLUONG.Name = "SOLUONG";
@@ -100,29 +128,6 @@
             this.VITRI.Name = "VITRI";
             this.VITRI.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.Location = new System.Drawing.Point(270, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Test - Thông tin đăng tuyển";
-            // 
-            // btn_trangchu
-            // 
-            this.btn_trangchu.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_trangchu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_trangchu.Location = new System.Drawing.Point(325, 419);
-            this.btn_trangchu.Name = "btn_trangchu";
-            this.btn_trangchu.Size = new System.Drawing.Size(149, 43);
-            this.btn_trangchu.TabIndex = 17;
-            this.btn_trangchu.Text = "Trang chủ";
-            this.btn_trangchu.UseVisualStyleBackColor = false;
-            this.btn_trangchu.Click += new System.EventHandler(this.btn_trangchu_Click);
-            // 
             // XemTTDT_L1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -132,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "XemTTDT_L1";
-            this.Text = "NOPHOSOTestThông tin đăng tuyển";
+            this.Text = "Xem thông tin đăng tuyển";
             this.Load += new System.EventHandler(this.NopHoSo_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -144,11 +149,11 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_trangchu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MADT;
         private System.Windows.Forms.DataGridViewTextBoxColumn YEUCAU;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn VITRI;
-        private System.Windows.Forms.Button btn_trangchu;
     }
 }
 
