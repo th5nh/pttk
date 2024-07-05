@@ -46,16 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.Designer.cs">
+      <DependentUpon>fDienTTDangTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER1_GUI\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.Designer.cs">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LAYER2_BLL\DienTTDangTuyen\NhanVien.cs" />
+    <Compile Include="LAYER2_BLL\DienTTDangTuyen\ThongTinDangTuyen.cs" />
     <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
+    <Compile Include="LAYER3_DAL\DBNhanVien.cs" />
+    <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.resx">
+      <DependentUpon>fDienTTDangTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
     </EmbeddedResource>
