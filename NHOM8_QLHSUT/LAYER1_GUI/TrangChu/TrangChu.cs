@@ -34,5 +34,10 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh
             xemttdt.ShowDialog();
             Close();
         }
+
+        private void btn_phieudkut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

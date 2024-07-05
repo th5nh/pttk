@@ -44,7 +44,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
             tbao_sdt.Text = checkPhone ? string.Empty : "Số điện thoại chỉ bao gồm 10 chữ số và bắt đầu từ 0";
             tbao_hoten.Text = checkName ? string.Empty : "Họ tên không bao gồm ký tự số và ký tự đặc biệt";
             tbao_email.Text = checkEmail ? string.Empty : "Email không hợp lệ";
-            tbao_ngaysinh.Text = checkBirth ? string.Empty : "Ngày sinh phải nhỏ hơn ngày hiện tại và ở thế kỷ 20";
+            tbao_ngaysinh.Text = checkBirth ? string.Empty : "Ngày sinh phải nhỏ hơn ngày hiện tại";
             tbao_diachi.Text = checkAddr ? string.Empty : "Bắt buộc điền địa chỉ";
 
             if (string.IsNullOrEmpty(txt_mauv.Text)) tbao_mauv.Text = "Bắt buộc điền mã ứng viên";

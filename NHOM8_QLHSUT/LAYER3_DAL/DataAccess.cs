@@ -40,11 +40,19 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 
         public static DataTable LayThongTinDangTuyen()
         {
-            DataTable dt = new DataTable();
-            string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
-            SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
-            sda.Fill(dt);
-            return dt;
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
+                SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public static bool ThemUngVien(string mauv, string hoten, string ngaysinh, string diachi, string sdt, string email, string manv)
