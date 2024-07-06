@@ -26,11 +26,16 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
             data.setMatKhau(txtPassword.Text);
             if(data.loginCheck())
             {
-                fDienTTDangTuyen f = new fDienTTDangTuyen();
+                MHMenu f = new MHMenu(txtUsername.Text);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

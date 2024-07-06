@@ -37,7 +37,6 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             }
         }
 
-        
         public static DataTable GetThongTinDangTuyen()
         {
             DataTable dt = new DataTable();
@@ -46,7 +45,6 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             sda.Fill(dt);
             return dt;
         }
-
 
         public static SqlConnection Connection
         {

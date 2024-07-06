@@ -58,7 +58,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@TTYeuCau", data.ThongTinYeuCau);
-                        cmd.Parameters.AddWithValue("@NgayBatDau", data.NgayDB);
+                        cmd.Parameters.AddWithValue("@NgayBatDau", data.NgayBD);
                         cmd.Parameters.AddWithValue("@NgayKetThuc", data.NgayKT);
                         cmd.Parameters.AddWithValue("@SoLuongTuyenDung", data.SoLuongTuyenDung);
                         cmd.Parameters.AddWithValue("@ViTriTuyenDung", data.ViTriTuyenDung);
@@ -80,6 +80,83 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 MessageBox.Show("Thêm thông tin đăng tuyển thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        //Lấy tất cả  thông tin đăng tuyển 
+        public DataTable GetAllTTDT()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                // Kết nối đến cơ sở dữ liệu
+                bool isConnected = DataAccess.Connect();
+
+                if (isConnected)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM THONGTINDANGTUYEN", DataAccess.Connection))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(data);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return data;
+        }
+
+        //Lấy thông tin một thông tin đăng tuyển theo MaDT 
+        public DataRow GetTTDTByID(string MaDT)
+        {
+            DataRow employeeInfo = null;
+            try
+            {
+                // Kết nối đến cơ sở dữ liệu
+                bool isConnected = DataAccess.Connect();
+
+                if (isConnected)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM THONGTINDANGTUYEN WHERE MaDT = @MaDangTuyen", DataAccess.Connection))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@MaDangTuyen", MaDT);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                employeeInfo = dt.Rows[0];
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return employeeInfo;
         }
     }
 }

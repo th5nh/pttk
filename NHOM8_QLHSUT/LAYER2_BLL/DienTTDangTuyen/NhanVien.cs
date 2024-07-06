@@ -1,9 +1,11 @@
 ﻿using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 {
@@ -11,13 +13,14 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
     {
         DBNhanVien db = new DBNhanVien();
 
-        string MaNV;
-        string HoTen;
-        string ChucVu;
-        string NgaySinh;
-        string DiaChi;
-        string SDT;
+        public string MaNV;
+        public string HoTen;
+        public string ChucVu;
+        public DateTime? NgaySinh;
+        public string DiaChi;
+        public string SDT;
         string MatKhau;
+        
 
         //Constructor
         public NhanVien()
@@ -41,7 +44,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.MatKhau= MatKhau;
         }
 
-        public void setNhanVien(string MaNV, string HoTen, string ChucVu, string NgaySinh, string DiaChi, string SDT)
+        public void setNhanVien(string MaNV, string HoTen, string ChucVu, DateTime NgaySinh, string DiaChi, string SDT, string MatKhau)
         {
             this.MaNV= MaNV;    
             this.HoTen= HoTen;
@@ -49,15 +52,28 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.NgaySinh= NgaySinh;
             this.DiaChi= DiaChi;
             this.SDT= SDT;
+            this.MatKhau = MatKhau;
         }
 
         public bool loginCheck()
         {
             if (this.MatKhau == db.GetEmpPassword(this.MaNV)) {
+                MessageBox.Show("Đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
+            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
 
+        public void getEmpInfo()
+        {
+            DataRow dt = db.GetEmpInfo(this.MaNV);
+            this.MaNV = dt["MaNV"].ToString();
+            this.HoTen = dt["HoTen"].ToString();
+            this.ChucVu = dt["ChucVu"].ToString();
+            this.DiaChi = dt["DiaChi"].ToString();
+            this.SDT = dt["SoDienThoai"].ToString();
+            this.NgaySinh = DateTime.Parse(dt["NgaySinh"].ToString());
+        }
     }
 }

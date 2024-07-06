@@ -11,6 +11,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 {
     internal class DBNhanVien
     {
+        //Lấy mật khẩu một nhân viên 
         public string GetEmpPassword(string username)
         {
             string password = null;
@@ -31,8 +32,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                             if (reader.HasRows)
                             {
                                 reader.Read();
-                                password = reader["MaNV"].ToString(); 
-                                MessageBox.Show("Đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                password = reader["MatKhau"].ToString(); 
                             }
                             else
                             {
@@ -52,6 +52,51 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 MessageBox.Show(ex.ToString());
             }
             return password;
+        }
+
+        //Lấy thông tin một nhân viên
+        public DataRow GetEmpInfo(string username)
+        {
+            DataRow employeeInfo = null;
+            try
+            {
+                // Kết nối đến cơ sở dữ liệu
+                bool isConnected = DataAccess.Connect();
+
+                if (isConnected)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE MaNV = @USERNAME", DataAccess.Connection))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@USERNAME", username);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                employeeInfo = dt.Rows[0];
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
+            }
+            return employeeInfo;
         }
 
     }
