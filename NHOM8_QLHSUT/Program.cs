@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER3_DAL;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan;
+using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace NHOM8_QLHSUT
 
             if(DataAccess.Connect())
             {
-                Application.Run(new NopHoSo_L1());
+                Application.Run(new ThanhToan_L1());
             }
         }
     }

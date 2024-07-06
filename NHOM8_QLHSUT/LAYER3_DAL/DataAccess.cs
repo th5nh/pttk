@@ -1,7 +1,9 @@
-﻿using System;
+﻿using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +46,81 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
             sda.Fill(dt);
             return dt;
+        }
+
+        public static DataTable LayDangTuyenSQL(string query, string maDT)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            SqlDataAdapter sda = new SqlDataAdapter();
+            try
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@maDT", maDT);
+                sda.SelectCommand = cmd;
+                int rowsReturn = sda.Fill(dt);
+                MessageBox.Show("" + rowsReturn);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.GetBaseException().ToString(), "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+        public static int LayDot(string query, string maDT)
+        {
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            SqlDataAdapter sda = new SqlDataAdapter();
+            try
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@maDT", maDT);
+                sda.SelectCommand = cmd;
+                int count = (int)cmd.ExecuteScalar();
+                return count;
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.GetBaseException().ToString(), "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return 0;
+        }
+        public static List<Voucher> LayVoucher(string query, string maDT)
+        {
+            try
+            {
+                List<Voucher> vouchers = new List<Voucher>();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand(query, _conn);
+                SqlDataAdapter sda = new SqlDataAdapter();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@maDT", maDT);
+                sda.SelectCommand = cmd;
+                sda.Fill(dt);
+                
+                foreach (DataRow dr in dt.Rows)
+                {
+                    Voucher vc = new Voucher();
+                    vc.MaCL = dr["MaCL"].ToString();
+                    vc.NgayBatDau = DateTime.Parse(dr["NgayBatDau"].ToString());
+                    vc.NgayKetThuc = DateTime.Parse(dr["NgayKetThuc"].ToString());
+                    vc.DieuKien = dr["DieuKien"].ToString();
+                    vc.MoTa = dr["MoTa"].ToString();
+                    vc.GiaTriUuDai = Int32.Parse(dr["GiaTriUuDai"].ToString());
+                    vouchers.Add(vc);
+                }
+
+                return vouchers;
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.GetBaseException().ToString(), "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
         }
     }
 }
