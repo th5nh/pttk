@@ -17,6 +17,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
         // Tam xai string, int de Test thay cho class DangTuyen
         string maDT = "DT0001";
         int dot = 0;
+       
         DataTable dt;
         HoaDon hd;
         List<Voucher> vouchers = new List<Voucher>();

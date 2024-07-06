@@ -17,6 +17,10 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         private static string _connString = "";
         private static SqlConnection _conn = new SqlConnection();
 
+        public static SqlConnection Connection
+        {
+            get { return _conn; }
+        }
         public static bool Connect()
         {
             try
