@@ -37,5 +37,6 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
         {
             this.Close();
         }
+
     }
 }
