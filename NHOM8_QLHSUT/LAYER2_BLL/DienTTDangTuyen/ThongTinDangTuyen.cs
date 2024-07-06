@@ -57,7 +57,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 
         public void ThemTTDangTuyen(ThongTinDangTuyen data)
         {
-            db.InsertThongTinDangTuyen(data);
+            db.ThemThongTinDangTuyen(data);
         }
 
         public string getAutoMaDangTuyen()

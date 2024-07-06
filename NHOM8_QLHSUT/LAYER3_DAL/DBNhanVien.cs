@@ -12,7 +12,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
     internal class DBNhanVien
     {
         //Lấy mật khẩu một nhân viên 
-        public string GetEmpPassword(string username)
+        public string getMatKhauNV(string username)
         {
             string password = null;
             try
@@ -55,7 +55,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         }
 
         //Lấy thông tin một nhân viên
-        public DataRow GetEmpInfo(string username)
+        public DataRow getThongTinNV(string username)
         {
             DataRow employeeInfo = null;
             try

@@ -57,7 +57,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 
         public bool loginCheck()
         {
-            if (this.MatKhau == db.GetEmpPassword(this.MaNV)) {
+            if (this.MatKhau == db.getMatKhauNV(this.MaNV)) {
                 MessageBox.Show("Đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
@@ -67,7 +67,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 
         public void getEmpInfo()
         {
-            DataRow dt = db.GetEmpInfo(this.MaNV);
+            DataRow dt = db.getThongTinNV(this.MaNV);
             this.MaNV = dt["MaNV"].ToString();
             this.HoTen = dt["HoTen"].ToString();
             this.ChucVu = dt["ChucVu"].ToString();

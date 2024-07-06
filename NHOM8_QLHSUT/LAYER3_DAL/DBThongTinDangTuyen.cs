@@ -44,7 +44,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         }
 
         // Thêm thông tin đăng tuyển 
-        public void InsertThongTinDangTuyen(ThongTinDangTuyen data)
+        public void ThemThongTinDangTuyen(ThongTinDangTuyen data)
         {
             try
             {
