@@ -1,5 +1,3 @@
-
-﻿using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -108,7 +106,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                                 ThongTinDangTuyen dangTuyen = new ThongTinDangTuyen();
                                 employeeInfo = dt.Rows[0];
                                 dangTuyen.ThongTinYeuCau = employeeInfo["ThongTinYeuCau"].ToString();
-                                dangTuyen.NgayDB = DateTime.Parse(employeeInfo["NgayBatDau"].ToString());
+                                dangTuyen.NgayBD = DateTime.Parse(employeeInfo["NgayBatDau"].ToString());
                                 dangTuyen.NgayKT = DateTime.Parse(employeeInfo["NgayKetThuc"].ToString());
                                 dangTuyen.SoLuongTuyenDung = Int32.Parse(employeeInfo["SLTuyenDung"].ToString());
                                 dangTuyen.ViTriTuyenDung = employeeInfo["ViTriTuyenDung"].ToString();
@@ -170,7 +168,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         }
 
         //Lấy thông tin một thông tin đăng tuyển theo MaDT 
-        public DataRow GetTTDTByID(string MaDT)
+        public DataRow GetTTDTByID_DataRow(string MaDT)
         {
             DataRow employeeInfo = null;
             try

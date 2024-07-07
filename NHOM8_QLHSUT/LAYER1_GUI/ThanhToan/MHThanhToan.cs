@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
+﻿using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,7 +63,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
 
         void HienThiHinhThuc()
         {
-            TimeSpan span = this.dangTuyen.NgayKT - this.dangTuyen.NgayDB;
+            TimeSpan span = this.dangTuyen.NgayKT - this.dangTuyen.NgayBD;
             if (span.Days < 30)
             {
                 cbbHinhThucThanhToan.Text = "1 Đợt";

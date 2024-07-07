@@ -16,30 +16,31 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 
         public string MaDT { get; set; }
         public string ThongTinYeuCau { get; set; }
-        public DateTime? NgayBD { get; set; }
-        public DateTime? NgayKT { get; set; }
+        public DateTime NgayBD { get; set; }
+        public DateTime NgayKT { get; set; }
         public int SoLuongTuyenDung { get; set; }
         public string ViTriTuyenDung { get; set; }
         public string HinhThucDangTuyen { get; set; }
         public string MaDN { get; set; }
+
+        public int Tien { get; set; }
 
         // Constructor
         public ThongTinDangTuyen()
         {
             this.MaDT = null;
             this.ThongTinYeuCau = null;
-            this.NgayBD = null;
-            this.NgayKT = null;
             this.SoLuongTuyenDung = -1;
             this.ViTriTuyenDung = null;
             this.HinhThucDangTuyen = null;
             this.MaDN = null;
+            this.Tien = 0;
         }
 
         //Set data cho class 
         public void setThongTinDangTuyen(string maDT, string thongTinYeuCau, DateTime ngayBD, DateTime ngayKT,
                                 int soLuongTuyenDung, string viTriTuyenDung, string hinhThucDangTuyen,
-                                string maDN)
+                                string maDN, int tien)
         {
             this.MaDT = maDT;
             this.ThongTinYeuCau = thongTinYeuCau;  
@@ -49,6 +50,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.ViTriTuyenDung = viTriTuyenDung;
             this.HinhThucDangTuyen = hinhThucDangTuyen;
             this.MaDN = maDN;
+            this.Tien = tien;
         }
 
         public void setMaDT(string MaDT)
@@ -75,7 +77,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
 
         public void getThongTinDangTuyen()
         {
-            DataRow dt = db.GetTTDTByID(this.MaDT);
+            DataRow dt = db.GetTTDTByID_DataRow(this.MaDT);
             this.ThongTinYeuCau = dt["ThongTinYeuCau"].ToString();
             this.NgayBD = DateTime.Parse(dt["NgayBatDau"].ToString());
             this.NgayKT = DateTime.Parse(dt["NgayKetThuc"].ToString());

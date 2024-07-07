@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 
 namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
 {

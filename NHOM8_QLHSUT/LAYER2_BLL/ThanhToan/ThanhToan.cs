@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NHOM8_QLHSUT.LAYER3_DAL;
+using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 
 namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
 {

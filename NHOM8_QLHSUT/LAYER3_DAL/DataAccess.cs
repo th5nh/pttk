@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
+﻿using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -344,11 +345,6 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
             sda.Fill(dt);
             return dt;
-        }
-
-        public static SqlConnection Connection
-        {
-            get { return _conn; }
         }
     }
 }

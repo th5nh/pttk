@@ -39,7 +39,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
             }
             else
             {
-                data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text);
+                data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text, 100000);
                 data.ThemTTDangTuyen(data);
                 // MHPhieuDangKyQuangCao f = new MHPhieuDangKyQuangCao(data);
                 // this.Hide();
