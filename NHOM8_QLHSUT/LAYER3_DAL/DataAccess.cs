@@ -92,7 +92,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             }
             return 0;
         }
-        public static List<Voucher> LayListVoucher(string query, string maDT)
+        public static List<Voucher> LayListVoucher(string query, ThongTinDangTuyen dangTuyen)
         {
             try
             {
@@ -102,7 +102,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 SqlDataAdapter sda = new SqlDataAdapter();
 
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@maDT", maDT);
+                cmd.Parameters.AddWithValue("@maDT", dangTuyen.MaDT);
                 sda.SelectCommand = cmd;
                 sda.Fill(dt);
 

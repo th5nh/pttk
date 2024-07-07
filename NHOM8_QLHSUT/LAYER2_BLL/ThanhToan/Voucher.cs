@@ -21,9 +21,9 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
             return DBVoucher.LayVoucher(maCL);
         }
 
-        public static List<Voucher> LayListVoucher(string maDT)
+        public static List<Voucher> LayListVoucher(ThongTinDangTuyen dangTuyen)
         {
-            List<Voucher> vouchers = DBVoucher.LayListVoucher(maDT);
+            List<Voucher> vouchers = DBVoucher.LayListVoucher(dangTuyen);
             List<Voucher> newVouchers = new List<Voucher>();
             foreach (Voucher i in vouchers)
             {

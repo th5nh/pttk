@@ -23,7 +23,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             return null;
         }
 
-        static public List<Voucher> LayListVoucher(string maDT)
+        static public List<Voucher> LayListVoucher(ThongTinDangTuyen dangTuyen)
         {
             string query;
             if (DataAccess.Connect())
@@ -32,7 +32,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                     "FROM THONGTINDANGTUYEN TTDT, THANHVIEN TV, THONGTINCHIENLUOC TTCL, CHIENLUOCUUDAI CLUD " +
                     "WHERE CLUD.MaCL = TTCL.MaCL AND TTDT.MaDN = TV.MaDN AND TTCL.MaDN = TV.MaDN AND TTDT.MaDT = @maDT";
 
-                return DataAccess.LayListVoucher(query, maDT);
+                return DataAccess.LayListVoucher(query, dangTuyen);
             }
             return null;
         }

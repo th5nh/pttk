@@ -11,8 +11,6 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
 {
     public class ThanhToan
     {
-       
-        
         public static bool checkThanhToan(HoaDon hoaDon, ThongTinDangTuyen dangTuyen)
         {
             if (!checkDotHoaDon(hoaDon)) return true;

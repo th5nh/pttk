@@ -82,7 +82,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
                 }
                 this.hoaDon = new HoaDon(this.dangTuyen, DateTime.Today);
                 if (!LAYER2_BLL.ThanhToan.ThanhToan.checkThanhToan(hoaDon, dangTuyen)) this.Dispose();    
-                this.vouchers = Voucher.LayListVoucher(this.dangTuyen.MaDT);
+                this.vouchers = Voucher.LayListVoucher(this.dangTuyen);
                 HienThiDangTuyen();
                 HienThiHinhThuc();
                 HienThiDot();

@@ -73,7 +73,8 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
             {
                 if (this.dot > 1)
                 {
-                    this.tienCanThanhToan = LayHoaDon(this.dangTuyen, this.dot - 1).tienConLai; // thay tien = dangTuyen.TienConLai
+                    this.tienCanThanhToan = LayHoaDon(this.dangTuyen, this.dot - 1).tienConLai;
+                    this.Voucher = LayHoaDon(this.dangTuyen, this.dot - 1).Voucher;
 
                     if (this.dot == 3)
                     {
