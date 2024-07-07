@@ -1,4 +1,5 @@
 ﻿using NHOM8_QLHSUT.LAYER2_BLL.DuyetHoSo;
+using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,7 +69,7 @@ namespace NHOM8_QLHSUT
                     dataTable0.Columns.Add("SLTuyenDung", typeof(int));
                     dataTable0.Columns.Add("ThongTinYeuCau", typeof(string));
                     dataTable0.Columns.Add("VitriTuyenDung", typeof(string));
-                    dataTable0.Rows.Add(ttdt.MaDT, ttdt.SLTuyenDung, ttdt.ThongTinYeuCau, ttdt.VitriTuyenDung);
+                    dataTable0.Rows.Add(ttdt.MaDT, ttdt.SoLuongTuyenDung, ttdt.ThongTinYeuCau, ttdt.ViTriTuyenDung);
                     dtg_dangtuyen.DataSource = dataTable0;
                 }
                 DataTable dataTable1 = new DataTable();

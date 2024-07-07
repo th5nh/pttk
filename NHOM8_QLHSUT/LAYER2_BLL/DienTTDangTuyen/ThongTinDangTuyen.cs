@@ -53,6 +53,18 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.Tien = tien;
         }
 
+        public ThongTinDangTuyen(string MaDT, string ThongTinYeuCau, int SLTuyenDung, string VitriTuyenDung)
+        {
+            this.MaDT = MaDT;
+            this.SoLuongTuyenDung = SLTuyenDung;
+            this.ThongTinYeuCau = ThongTinYeuCau;
+            this.ViTriTuyenDung = VitriTuyenDung;
+        }
+        public static ThongTinDangTuyen LayThongTinDangTuyen(string madt)
+        {
+            return DBThongTinDangTuyen.LayThongTinDangTuyen(madt);
+        }
+
         public void setMaDT(string MaDT)
         {
             this.MaDT = MaDT;

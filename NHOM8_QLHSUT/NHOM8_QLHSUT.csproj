@@ -145,11 +145,9 @@
     <Compile Include="LAYER2_BLL\NopHoSo\DangKyUngVien_L2.cs" />
     <Compile Include="LAYER2_BLL\NopHoSo\XemTTDT_L2.cs" />
     <!-- ======= -->
-    <Compile Include="LAYER2_BLL\DuyetHoSo\ThongTinDangTuyen.cs" />
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngTuyen.cs" />
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngVien.cs" />
     <!-- <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" /> -->
-    <Compile Include="LAYER3_DAL\ThongTinDangTuyenDB.cs" />
     <Compile Include="LAYER3_DAL\UngTuyenDB.cs" />
     <Compile Include="LAYER3_DAL\UngVienDB.cs" />
     <Compile Include="Program.cs" />
