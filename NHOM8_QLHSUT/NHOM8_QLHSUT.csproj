@@ -32,6 +32,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.designer.cs">
+      <DependentUpon>ManHinhDuyetHoSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +96,19 @@
     <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.Designer.cs">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LAYER2_BLL\DuyetHoSo\ThongTinDangTuyen.cs" />
+    <Compile Include="LAYER2_BLL\DuyetHoSo\UngTuyen.cs" />
+    <Compile Include="LAYER2_BLL\DuyetHoSo\UngVien.cs" />
+    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+    <Compile Include="LAYER3_DAL\DataAccess.cs" />
+    <Compile Include="LAYER3_DAL\ThongTinDangTuyenDB.cs" />
+    <Compile Include="LAYER3_DAL\UngTuyenDB.cs" />
+    <Compile Include="LAYER3_DAL\UngVienDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.resx">
+      <DependentUpon>ManHinhDuyetHoSo.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,9 +162,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LAYER1_GUI\DuyetHoSo\" />
     <Folder Include="LAYER1_GUI\VanVan\" />
-    <Folder Include="LAYER2_BLL\DuyetHoSo\" />
     <Folder Include="LAYER2_BLL\VanVan\" />
   </ItemGroup>
   <ItemGroup>
