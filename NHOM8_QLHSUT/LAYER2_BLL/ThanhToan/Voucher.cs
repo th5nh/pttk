@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NHOM8_QLHSUT.LAYER3_DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,10 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
         string moTa;
         int giaTriUuDai;
 
-        
+        static public Voucher LayVoucher(string maCL)
+        {
+            return DBVoucher.LayVoucher(maCL);
+        }
 
 
 

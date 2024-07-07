@@ -60,12 +60,13 @@
     </Compile>
     <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\HoaDon.cs" />
-    <Compile Include="LAYER2_BLL\ThanhToan\ThanhToan_L2.cs" />
+    <Compile Include="LAYER2_BLL\ThanhToan\ThanhToan.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\ThongTinDangTuyen.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\Voucher.cs" />
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
+    <Compile Include="LAYER3_DAL\DBHoaDon.cs" />
     <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
-    <Compile Include="LAYER3_DAL\ThanhToanDB_L3.cs" />
+    <Compile Include="LAYER3_DAL\DBVoucher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">

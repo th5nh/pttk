@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
 {
@@ -15,64 +16,79 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
     {
         // Lay Thong Tin Dang Tuyen o use case truoc
         // Tam xai string, int de Test thay cho class DangTuyen
-        string maDT = "DT0001";
-        int dot = 0;
-       
-        DataTable dt;
-        HoaDon hd;
+        ThongTinDangTuyen dangTuyen = new ThongTinDangTuyen();
+        HoaDon hoaDon;
         List<Voucher> vouchers = new List<Voucher>();
         public ThanhToan_L1()
         {
             InitializeComponent();
-            dt = ThanhToan_L2.LayDangTuyen(maDT);
         }
-        public ThanhToan_L1(string maDT) // Test thay cho class DangTuyen
+        public ThanhToan_L1(ThongTinDangTuyen dangTuyen) // Test thay cho class DangTuyen
         {
             InitializeComponent();
-            this.maDT = maDT;
-            dt = ThanhToan_L2.LayDangTuyen(maDT);
+            this.dangTuyen = dangTuyen;
         }
         void HienThiVoucher()
         {
-            cbbVoucher.Items.Add("");
-            foreach (Voucher vc in vouchers) 
+            if (LAYER2_BLL.ThanhToan.ThanhToan.checkDotHoaDon(hoaDon))
+            {
+                this.lbVoucher.Enabled = false;
+                this.cbbVoucher.Enabled = false;
+            }    
+            this.cbbVoucher.Items.Add("");  
+            foreach (Voucher vc in this.vouchers)
             {
                 string code = (vc.MaCL);
-                MessageBox.Show(code);
-                cbbVoucher.Items.Add(code);
+                this.cbbVoucher.Items.Add(code);
             }
         }
         void HienThiDangTuyen()
         {
-            dtDangTuyen.DataSource = dt;
+            this.dtDangTuyen.DataSource = new List<ThongTinDangTuyen>() { this.dangTuyen };
         }
         void HienThiDot()
         {
-            dot = HoaDon.HienThiDot(maDT); // dot = hd.Dot
-            if (dot > 1)
+            if (LAYER2_BLL.ThanhToan.ThanhToan.checkDotHoaDon(hoaDon))
             {
                 cbbHinhThucThanhToan.Text = cbbHinhThucThanhToan.Items[1].ToString();
                 cbbHinhThucThanhToan.Enabled = false;
             }
-            lbDot.Text = dot.ToString();
+            this.lbDot.Text = this.hoaDon.Dot.ToString();
         }
         void HienThiTien(int tien)
         {
-            lbTien.Text = tien.ToString();
+            this.lbTien.Text = tien.ToString();
+        }
+
+        void HienThiHinhThuc()
+        {
+            TimeSpan span = this.dangTuyen.NgayKT - this.dangTuyen.NgayDB;
+            if (span.Days < 30)
+            {
+                cbbHinhThucThanhToan.Text = "1 Đợt";
+                hoaDon.HinhThucTT = "1 Đợt";
+                lbHinhThucThanhToan.Enabled = false;
+                cbbHinhThucThanhToan.Enabled = false;
+            }    
         }
         private void ThanhToan_L1_Load(object sender, EventArgs e)
         {
             try
             {
-                if (dt.Rows.Count == 0)
+                if (!LAYER2_BLL.ThanhToan.ThanhToan.checkDangTuyen(this.dangTuyen))
                 {
-                    throw new Exception("Khong co du lieu");
+                    MessageBox.Show("không có dữ liệu");
+                    this.Dispose();
                 }
-                vouchers = ThanhToan_L2.LayVoucher(maDT);
+                this.hoaDon = new HoaDon(this.dangTuyen, DateTime.Today);
+                if (!LAYER2_BLL.ThanhToan.ThanhToan.checkThanhToan(hoaDon, dangTuyen)) this.Dispose();    
+                this.vouchers = LAYER2_BLL.ThanhToan.ThanhToan.LayListVoucher(this.dangTuyen.MaDT);
                 HienThiDangTuyen();
-                HienThiDot(); 
+                HienThiHinhThuc();
+                HienThiDot();
                 HienThiVoucher();
-                hd = new HoaDon(maDT, dot, DateTime.Today);
+                int tien = hoaDon.TinhTien(this.dangTuyen, null);
+                HienThiTien(tien);
             }
             catch (Exception x)
             {
@@ -82,22 +98,59 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
         }
         private void cbbCachThucThanhToan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbCachThucThanhToan.SelectedIndex == 0)
+            if (this.cbbCachThucThanhToan.SelectedIndex == 0)
             {
-                lbMaThe.Enabled = false;
-                txtMaThe.Enabled = false;
+                this.lbMaThe.Enabled = false;
+                this.txtMaThe.Enabled = false;
             }
             else if (cbbCachThucThanhToan.SelectedIndex == 1)
             {
-                lbMaThe.Enabled = true;
-                txtMaThe.Enabled = true;
+                this.lbMaThe.Enabled = true;
+                this.txtMaThe.Enabled = true;
             }
         }
 
         private void cbbVoucher_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string voucher = cbbVoucher.SelectedIndex.ToString();
-            int tien = hd.TinhTien(voucher);
+            Voucher voucher = new Voucher();
+            string maCL = cbbVoucher.Text;
+            foreach (Voucher vc in vouchers)
+            {
+                if (vc.MaCL == maCL)
+                {
+                    voucher = vc;
+                    break;
+                }
+                voucher = null;  
+            }
+            int tien = this.hoaDon.TinhTien(this.dangTuyen, voucher);
+            this.hoaDon.Voucher = voucher;
+            HienThiTien(tien);
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            this.hoaDon.MaThe = txtMaThe.Text;
+            HoaDon.ThemHoaDon(hoaDon);
+            this.Dispose();
+        }
+
+        private void cbbHinhThucThanhToan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.hoaDon.HinhThucTT = cbbHinhThucThanhToan.Text;
+            Voucher voucher = new Voucher();
+            string maCL = cbbVoucher.Text;
+            foreach (Voucher vc in vouchers)
+            {
+                if (vc.MaCL == maCL)
+                {
+                    voucher = vc;
+                    break;
+                }
+                voucher = null;
+            }
+            int tien = this.hoaDon.TinhTien(this.dangTuyen, voucher);
+            this.hoaDon.Voucher = voucher;
             HienThiTien(tien);
         }
     }
