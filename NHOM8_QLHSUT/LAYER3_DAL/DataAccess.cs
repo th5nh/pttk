@@ -77,6 +77,61 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 return false;
             } 
         }
+
+
+        //public static DataTable LayThongBaoDangTuyen()
+        //{
+        //    try
+        //    {
+        //        DataTable dt = new DataTable();
+
+
+        //        string query = @"
+        //    SELECT TT.MaDT, TT.ThongTinYeuCau, TT.SLTuyenDung, TT.ViTriTuyenDung 
+        //    FROM THONGTINDANGTUYEN TT
+        //    JOIN HOADONTHANHTOAN HD ON TT.MaDN = HD.MaDT
+        //    WHERE HD.SoTienConLai = 0
+        //";
+
+      
+        //        using (SqlCommand cmd = new SqlCommand(query, _conn))
+        //        {
+        //            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        //            sda.Fill(dt); 
+        //        }
+
+        //        return dt;  
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.ToString()); 
+        //        return null; 
+        //    }
+        //}
+
+        public static DataTable LayThongBaoDangTuyen()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+
+                string query = "SELECT MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN  FROM THONGTINDANGTUYEN TT";
+                    
+                using (SqlCommand cmd = new SqlCommand(query, _conn))
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    sda.Fill(dt);
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
     }
 }
     

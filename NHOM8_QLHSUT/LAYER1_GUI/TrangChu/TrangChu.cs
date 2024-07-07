@@ -1,4 +1,5 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.NopHoSo;
+using NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,14 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh
             GhiNhanPhieuUngTuyen_L1 ghiPDKUT = new GhiNhanPhieuUngTuyen_L1();
             Hide();
             ghiPDKUT.ShowDialog();
+            Close();
+        }
+
+        private void btn_xemtbtd_Click(object sender, EventArgs e)
+        {
+            DangThongBaoTuyenDung_L1 xemtbtd = new DangThongBaoTuyenDung_L1();
+            Hide();
+            xemtbtd.ShowDialog();
             Close();
         }
     }

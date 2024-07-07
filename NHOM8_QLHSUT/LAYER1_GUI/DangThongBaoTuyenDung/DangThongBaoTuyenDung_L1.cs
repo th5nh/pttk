@@ -1,5 +1,5 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
-using NHOM8_QLHSUT.LAYER2_BLL.NopHoSo;
+using NHOM8_QLHSUT.LAYER2_BLL.DangThongBaoTuyenDung;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,27 +10,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NHOM8_QLHSUT
+namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
 {
-    public partial class XemTTDT_L1 : Form
+    public partial class DangThongBaoTuyenDung_L1 : Form
     {
-        public XemTTDT_L1()
+        public DangThongBaoTuyenDung_L1()
         {
             InitializeComponent();
         }
+    
 
-        private void NopHoSo_L1_Load(object sender, EventArgs e)
+        private void DangThongBao_L1_Load(object sender, EventArgs e)
         {
-            DataTable dt = XemTTDT_L2.ThongTinDangTuyen();
-
+            DataTable dt = DangThongBaoTuyenDung_L2.ThongBaoDangTuyen();
             foreach (DataRow dr in dt.Rows)
             {
-                dataGridView1.Rows.Add(dr.ItemArray);
+                dataGridView.Rows.Add(dr.ItemArray);
             }
         }
 
 
-        private void btn_trangchu_Click(object sender, EventArgs e)
+        private void btc_vtc_Click(object sender, EventArgs e)
         {
             TrangChu trangchu = new TrangChu();
             Hide();
