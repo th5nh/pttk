@@ -49,7 +49,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
             this.MaDN = maDN;
             this.Tien = tien;
         }
-        public static ThongTinDangTuyen getThongTinDangTuyen(string maDT)
+/*        public static ThongTinDangTuyen getThongTinDangTuyen(string maDT)
         {
             return DBThongTinDangTuyen.GetTTDTByID(maDT);
 
@@ -62,6 +62,6 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
         public string getAutoMaDangTuyen()
         {
             return db.GetMaThongTinDangTuyen();
-        }
+        }*/
     }
 }
