@@ -77,8 +77,6 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 return false;
             } 
         }
-
-
         //public static DataTable LayThongTinDangTuyen()
         //{
         //    try
@@ -117,8 +115,43 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 return null;
             }
         }
+        public static DataTable LayThongTinDangTuyen(string tb_dangtuyen)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN WHERE MaDT = '" + tb_dangtuyen+ "'" ;
+            SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+            sda.Fill(dt);
+            return dt;
+        }
+        public static DataTable LayThongTinUngVien(string tb_Ungvien)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT HoTen, NgaySinh, SoDienThoai, DiaChi FROM UNGVIEN WHERE MaUV = '" + tb_Ungvien + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+            sda.Fill(dt);
+            return dt;
+        }
+        public static DataTable LayThongTinUngTuyen(string tb_dangtuyen, string tb_Ungvien)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT BangCap, ChungTu, HoSo, TinhTrang FROM UNGTUYEN WHERE MaUV = '" + tb_Ungvien + "' AND MaDT= '" + tb_dangtuyen + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+            sda.Fill(dt);
+            return dt;
+        }
+        public static DataTable CapNhat(string tb_dangtuyen, string tb_Ungvien,string cb_tinhtrang)
+        {
+            DataTable dt = new DataTable();
+            string query = "Update UNGTUYEN SET TinhTrang= N'"+cb_tinhtrang+"'"+ " WHERE MaUV = '" + tb_Ungvien + "' AND MaDT= '" + tb_dangtuyen + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+            sda.Fill(dt);
+            return dt;
+        }
 
-
+        public static SqlConnection Connection
+        {
+            get { return _conn; }
+        }
     }
 }
     
