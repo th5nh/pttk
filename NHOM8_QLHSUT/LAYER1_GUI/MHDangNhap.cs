@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace NHOM8_QLHSUT.LAYER1_GUI
 {
-    public partial class fLogin : Form
+    public partial class MHDangNhap : Form
     {
         NhanVien data = new NhanVien();
-        public fLogin()
+        public MHDangNhap()
         {
             InitializeComponent();
         }

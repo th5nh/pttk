@@ -1,6 +1,6 @@
 ﻿namespace NHOM8_QLHSUT.LAYER1_GUI
 {
-    partial class fLogin
+    partial class MHDangNhap
     {
         /// <summary>
         /// Required designer variable.

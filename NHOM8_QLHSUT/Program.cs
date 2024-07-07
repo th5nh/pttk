@@ -22,7 +22,7 @@ namespace NHOM8_QLHSUT
 
             if(DataAccess.Connect())
             {
-                Application.Run(new fLogin());
+                Application.Run(new MHDangNhap());
             }
         }
     }
