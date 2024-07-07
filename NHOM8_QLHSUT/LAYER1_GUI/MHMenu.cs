@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung;
+using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
 using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan_Huy;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using System;
@@ -65,6 +66,15 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
         private void ứngViênToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ManHinhDuyetHoSo f = new ManHinhDuyetHoSo();
+            this.Hide();
+            f.ShowDialog();
+
+            this.Show();
+        }
+
+        private void đăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DangThongBaoTuyenDung_L1 f = new DangThongBaoTuyenDung_L1();
             this.Hide();
             f.ShowDialog();
 

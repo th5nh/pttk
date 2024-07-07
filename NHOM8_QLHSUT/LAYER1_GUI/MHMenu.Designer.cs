@@ -283,6 +283,7 @@
             this.đăngToolStripMenuItem.Name = "đăngToolStripMenuItem";
             this.đăngToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
             this.đăngToolStripMenuItem.Text = "Đăng thông báo tuyển dụng";
+            this.đăngToolStripMenuItem.Click += new System.EventHandler(this.đăngToolStripMenuItem_Click);
             // 
             // duyệtHồSơToolStripMenuItem
             // 
