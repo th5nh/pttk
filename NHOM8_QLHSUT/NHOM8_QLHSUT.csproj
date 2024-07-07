@@ -95,10 +95,10 @@
     <Compile Include="LAYER1_GUI\MHMenu.Designer.cs">
       <DependentUpon>MHMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.cs">
+ <!--   <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.cs"> -->
 <!-->>>>>>> Huy-Merge -->
-      <SubType>Form</SubType>
-    </Compile>
+ <!--     <SubType>Form</SubType> -->
+  <!--  </Compile> -->
     <Compile Include="LAYER1_GUI\DangThongBaoTuyenDung\DangThongBaoTuyenDung_L1.Designer.cs">
       <DependentUpon>DangThongBaoTuyenDung_L1.cs</DependentUpon>
     </Compile>
@@ -134,7 +134,7 @@
     <Compile Include="LAYER2_BLL\DuyetHoSo\ThongTinDangTuyen.cs" />
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngTuyen.cs" />
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngVien.cs" />
-    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+   <!-- <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" /> -->
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="LAYER3_DAL\ThongTinDangTuyenDB.cs" />
     <Compile Include="LAYER3_DAL\UngTuyenDB.cs" />
@@ -152,7 +152,7 @@
     </Compile>
     <Compile Include="LAYER2_BLL\DienTTDangTuyen\NhanVien.cs" />
     <Compile Include="LAYER2_BLL\DienTTDangTuyen\ThongTinDangTuyen.cs" />
-    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+ <!--   <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" /> -->
 <!-- >>>>>>> Huy-Merge -->
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="LAYER3_DAL\DBNhanVien.cs" />
@@ -185,10 +185,10 @@
     <EmbeddedResource Include="LAYER1_GUI\MHMenu.resx">
       <DependentUpon>MHMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">
-      <DependentUpon>NopHoSo_L1.cs</DependentUpon>
+  <!--  <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx"> -->
+  <!--    <DependentUpon>NopHoSo_L1.cs</DependentUpon> -->
 <!-- >>>>>>> Huy-Merge -->
-    </EmbeddedResource>
+  <!--  </EmbeddedResource> -->
     <EmbeddedResource Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.resx">
       <DependentUpon>MHDSThanhToan.cs</DependentUpon>
     </EmbeddedResource>
