@@ -123,9 +123,7 @@
     <Compile Include="LAYER2_BLL\ThanhToan\ThanhToan.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\ThongTinDangTuyen.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\Voucher.cs" />
-    <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="LAYER3_DAL\DBHoaDon.cs" />
-    <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
     <Compile Include="LAYER3_DAL\DBVoucher.cs" />
     <Compile Include="LAYER1_GUI\TrangChu\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
@@ -150,7 +148,6 @@
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngTuyen.cs" />
     <Compile Include="LAYER2_BLL\DuyetHoSo\UngVien.cs" />
     <!-- <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" /> -->
-    <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="LAYER3_DAL\ThongTinDangTuyenDB.cs" />
     <Compile Include="LAYER3_DAL\UngTuyenDB.cs" />
     <Compile Include="LAYER3_DAL\UngVienDB.cs" />
