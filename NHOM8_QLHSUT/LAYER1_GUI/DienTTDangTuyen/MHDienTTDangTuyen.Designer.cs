@@ -1,6 +1,6 @@
 ﻿namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
 {
-    partial class fDienTTDangTuyen
+    partial class MHDienTTDangTuyen
     {
         /// <summary>
         /// Required designer variable.

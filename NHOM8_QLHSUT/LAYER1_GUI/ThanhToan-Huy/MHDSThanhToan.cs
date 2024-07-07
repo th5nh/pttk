@@ -58,7 +58,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan_Huy
 
                 MessageBox.Show(data_2.getViTri());
 
-                fDienTTDangTuyen f = new fDienTTDangTuyen();
+                MHDienTTDangTuyen f = new MHDienTTDangTuyen();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

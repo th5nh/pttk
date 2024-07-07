@@ -82,8 +82,8 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             }
         }
 
-        //Lấy tất cả  thông tin đăng tuyển 
-        public DataTable GetAllTTDT()
+        //Lấy tất cả  thông tin đăng tuyển chưa thanh toán het
+        public DataTable GetTTDTChuaHoanTatTT()
         {
             DataTable data = new DataTable();
             try
@@ -93,7 +93,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 
                 if (isConnected)
                 {
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM THONGTINDANGTUYEN", DataAccess.Connection))
+                    using (SqlCommand cmd = new SqlCommand("SELECT TTDT.MADT, TTDT.NgayBatDau, TTDT.NgayKetThuc, TTDT.MaDN, HDTT.SoTienCanThanhToan, HDTT.SoTienDaThanhToan, HDTT.SoTienConLai, HDTT.DotThanhToan\r\nFROM THONGTINDANGTUYEN TTDT JOIN HOADONTHANHTOAN HDTT ON TTDT.MADT = HDTT.MADT\r\nWHERE HDTT.MADT NOT IN (SELECT HDTT.MADT \r\n\t\t\t\t\t\tFROM HOADONTHANHTOAN JOIN THONGTINDANGTUYEN TTDT ON TTDT.MADT = HDTT.MADT\r\n\t\t\t\t\t\tWHERE HDTT.SoTienConLai = 0)", DataAccess.Connection))
                     {
                         cmd.CommandType = CommandType.Text;
 

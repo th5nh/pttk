@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.cs">
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.Designer.cs">
-      <DependentUpon>fDienTTDangTuyen.cs</DependentUpon>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.Designer.cs">
+      <DependentUpon>MHDienTTDangTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHPhieuDangKyQuangCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHPhieuDangKyQuangCao.Designer.cs">
+      <DependentUpon>MHPhieuDangKyQuangCao.cs</DependentUpon>
     </Compile>
     <Compile Include="LAYER1_GUI\fLogin.cs">
       <SubType>Form</SubType>
@@ -84,8 +90,11 @@
     <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LAYER1_GUI\DienTTDangTuyen\fDienTTDangTuyen.resx">
-      <DependentUpon>fDienTTDangTuyen.cs</DependentUpon>
+    <EmbeddedResource Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.resx">
+      <DependentUpon>MHDienTTDangTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\DienTTDangTuyen\MHPhieuDangKyQuangCao.resx">
+      <DependentUpon>MHPhieuDangKyQuangCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LAYER1_GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

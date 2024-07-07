@@ -36,7 +36,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fDienTTDangTuyen f = new fDienTTDangTuyen();
+            MHDienTTDangTuyen f = new MHDienTTDangTuyen();
             this.Hide();
             f.ShowDialog();
 
@@ -56,7 +56,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
         private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MHDSThanhToan f = new MHDSThanhToan();
-            this.Close();
+            this.Hide();
             f.ShowDialog();
 
             this.Show();
