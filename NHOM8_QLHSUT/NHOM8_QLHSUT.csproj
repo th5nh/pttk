@@ -118,7 +118,7 @@
     <Compile Include="LAYER1_GUI\ThanhToan\MHThanhToan.Designer.cs">
       <DependentUpon>MHThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+   <!-- <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" /> -->
     <Compile Include="LAYER2_BLL\ThanhToan\HoaDon.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\ThanhToan.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\ThongTinDangTuyen.cs" />
