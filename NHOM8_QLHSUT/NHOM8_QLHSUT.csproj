@@ -71,6 +71,7 @@
       <DependentUpon>XemTTDT_L1.cs</DependentUpon>
     </Compile>
     <Compile Include="LAYER2_BLL\NopHoSo\DangKyUngVien_L2.cs" />
+    <Compile Include="LAYER2_BLL\NopHoSo\GhiNhanPhieuUngTuyen_L2.cs" />
     <Compile Include="LAYER2_BLL\NopHoSo\XemTTDT_L2.cs" />
     <Compile Include="LAYER3_DAL\DataAccess.cs" />
     <Compile Include="Program.cs" />

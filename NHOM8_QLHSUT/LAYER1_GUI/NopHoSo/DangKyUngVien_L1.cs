@@ -23,12 +23,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
 
         private void DangKyUngVien_L1_Load(object sender, EventArgs e)
         {   
-            tbao_mauv.Text = string.Empty;
-            tbao_hoten.Text = string.Empty;
-            tbao_diachi.Text = string.Empty;
-            tbao_ngaysinh.Text = string.Empty;
-            tbao_sdt.Text = string.Empty;
-            tbao_email.Text = string.Empty;
+            btn_huy_Click(sender, e);
         }
 
         private void btn_dangky_Click(object sender, EventArgs e)
@@ -74,6 +69,23 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
             Hide();
             trangchu.ShowDialog();
             Close();
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            txt_mauv.Text = string.Empty;
+            txt_hoten.Text = string.Empty;
+            txt_sdt.Text = string.Empty;
+            txt_email.Text = string.Empty;
+            txt_diachi.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
+
+            tbao_mauv.Text = string.Empty;
+            tbao_hoten.Text = string.Empty;
+            tbao_diachi.Text = string.Empty;
+            tbao_ngaysinh.Text = string.Empty;
+            tbao_sdt.Text = string.Empty;
+            tbao_email.Text = string.Empty;
         }
     }
 }

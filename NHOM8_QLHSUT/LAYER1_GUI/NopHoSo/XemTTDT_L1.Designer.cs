@@ -33,12 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_trangchu = new System.Windows.Forms.Button();
             this.MADT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.YEUCAU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VITRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_trangchu = new System.Windows.Forms.Button();
+            this.MADN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.MADT,
             this.YEUCAU,
             this.SOLUONG,
-            this.VITRI});
+            this.VITRI,
+            this.MADN});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,42 +80,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(757, 328);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // MADT
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MADT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MADT.FillWeight = 90F;
-            this.MADT.HeaderText = "Mã DT";
-            this.MADT.MinimumWidth = 6;
-            this.MADT.Name = "MADT";
-            this.MADT.ReadOnly = true;
-            // 
-            // YEUCAU
-            // 
-            this.YEUCAU.FillWeight = 200F;
-            this.YEUCAU.HeaderText = "Yêu cầu";
-            this.YEUCAU.MinimumWidth = 6;
-            this.YEUCAU.Name = "YEUCAU";
-            this.YEUCAU.ReadOnly = true;
-            // 
-            // SOLUONG
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SOLUONG.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SOLUONG.FillWeight = 90F;
-            this.SOLUONG.HeaderText = "Số lượng";
-            this.SOLUONG.MinimumWidth = 6;
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.ReadOnly = true;
-            // 
-            // VITRI
-            // 
-            this.VITRI.FillWeight = 200F;
-            this.VITRI.HeaderText = "Vị trí";
-            this.VITRI.MinimumWidth = 6;
-            this.VITRI.Name = "VITRI";
-            this.VITRI.ReadOnly = true;
             // 
             // label1
             // 
@@ -137,6 +103,49 @@
             this.btn_trangchu.Text = "Trang chủ";
             this.btn_trangchu.UseVisualStyleBackColor = false;
             this.btn_trangchu.Click += new System.EventHandler(this.btn_trangchu_Click);
+            // 
+            // MADT
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MADT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MADT.FillWeight = 90F;
+            this.MADT.HeaderText = "Mã DT";
+            this.MADT.MinimumWidth = 6;
+            this.MADT.Name = "MADT";
+            this.MADT.ReadOnly = true;
+            // 
+            // YEUCAU
+            // 
+            this.YEUCAU.FillWeight = 160F;
+            this.YEUCAU.HeaderText = "Yêu cầu";
+            this.YEUCAU.MinimumWidth = 6;
+            this.YEUCAU.Name = "YEUCAU";
+            this.YEUCAU.ReadOnly = true;
+            // 
+            // SOLUONG
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SOLUONG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SOLUONG.FillWeight = 90F;
+            this.SOLUONG.HeaderText = "Số lượng";
+            this.SOLUONG.MinimumWidth = 6;
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.ReadOnly = true;
+            // 
+            // VITRI
+            // 
+            this.VITRI.FillWeight = 120F;
+            this.VITRI.HeaderText = "Vị trí";
+            this.VITRI.MinimumWidth = 6;
+            this.VITRI.Name = "VITRI";
+            this.VITRI.ReadOnly = true;
+            // 
+            // MADN
+            // 
+            this.MADN.HeaderText = "Mã DN";
+            this.MADN.MinimumWidth = 6;
+            this.MADN.Name = "MADN";
+            this.MADN.ReadOnly = true;
             // 
             // XemTTDT_L1
             // 
@@ -164,6 +173,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn YEUCAU;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn VITRI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MADN;
     }
 }
 

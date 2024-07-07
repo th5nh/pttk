@@ -50,6 +50,7 @@
             this.tbao_sdt = new System.Windows.Forms.TextBox();
             this.tbao_email = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_title
@@ -176,7 +177,7 @@
             this.btn_dangky.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dangky.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_dangky.Location = new System.Drawing.Point(445, 382);
+            this.btn_dangky.Location = new System.Drawing.Point(550, 382);
             this.btn_dangky.Name = "btn_dangky";
             this.btn_dangky.Size = new System.Drawing.Size(149, 43);
             this.btn_dangky.TabIndex = 13;
@@ -189,7 +190,7 @@
             this.btn_trangchu.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_trangchu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_trangchu.Location = new System.Drawing.Point(271, 382);
+            this.btn_trangchu.Location = new System.Drawing.Point(157, 382);
             this.btn_trangchu.Name = "btn_trangchu";
             this.btn_trangchu.Size = new System.Drawing.Size(149, 43);
             this.btn_trangchu.TabIndex = 16;
@@ -284,11 +285,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ứng viên";
             // 
+            // btn_huy
+            // 
+            this.btn_huy.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_huy.Location = new System.Drawing.Point(354, 382);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(149, 43);
+            this.btn_huy.TabIndex = 24;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            // 
             // DangKyUngVien_L1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 450);
+            this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.tbao_email);
             this.Controls.Add(this.tbao_sdt);
             this.Controls.Add(this.tbao_diachi);
@@ -343,5 +358,6 @@
         private System.Windows.Forms.TextBox tbao_sdt;
         private System.Windows.Forms.TextBox tbao_email;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_huy;
     }
 }

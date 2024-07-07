@@ -43,7 +43,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             try
             {
                 DataTable dt = new DataTable();
-                string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
+                string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung, MADN FROM THONGTINDANGTUYEN";
                 SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
                 sda.Fill(dt);
                 return dt;
@@ -76,6 +76,46 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 Console.WriteLine(ex.ToString());
                 return false;
             } 
+        }
+
+        public static DataTable LayThongTinUngVien()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "SELECT * FROM UNGVIEN";
+                SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        public static bool ThemPhieuGhiNhanUngTuyen(string mauv, string madt, string bangcap, string tinhtrang, string chungtu, string hoso)
+        {
+            try
+            {
+                string query = "INSERT INTO UNGTUYEN(MaUV, MADT, BANGCAP, TINHTRANG, CHUNGTU, HOSO) " +
+                    "VALUES (@MAUV, @MADT, @BANGCAP, @TINHTRANG, @CHUNGTU, @HOSO)";
+                SqlCommand cmd = new SqlCommand(query, _conn);
+                cmd.Parameters.AddWithValue("@MAUV", mauv);
+                cmd.Parameters.AddWithValue("@MADT", madt);
+                cmd.Parameters.AddWithValue("@BANGCAP", bangcap);
+                cmd.Parameters.AddWithValue("@TINHTRANG", tinhtrang);
+                cmd.Parameters.AddWithValue("@CHUNGTU", chungtu);
+                cmd.Parameters.AddWithValue("@HOSO", hoso);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
         }
     }
 }
