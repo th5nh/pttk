@@ -10,11 +10,11 @@ using NHOM8_QLHSUT.LAYER3_DAL;
 
 namespace NHOM8_QLHSUT.LAYER2_BLL.NopHoSo
 {
-    public class NopHoSo_L2
+    public class XemTTDT_L2
     {
         public static DataTable ThongTinDangTuyen()
         {
-            DataTable dt = DataAccess.GetThongTinDangTuyen();
+            DataTable dt = DataAccess.LayThongTinDangTuyen();
             return dt;
         }
     }

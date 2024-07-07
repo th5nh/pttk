@@ -1,11 +1,16 @@
+
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan;
 using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
 using NHOM8_QLHSUT.LAYER3_DAL;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
+using NHOM8_QLHSUT.LAYER1_GUI.NopHoSo;
+using NHOM8_QLHSUT.LAYER1_GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
 
 namespace NHOM8_QLHSUT
 {
@@ -19,11 +24,9 @@ namespace NHOM8_QLHSUT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ThongTinDangTuyen ttdt = new ThongTinDangTuyen();
-            ttdt.setThongTinDangTuyen("DT0010", "Test", DateTime.Now, DateTime.Now, 1, "test", "test", "DN0001", 100000);
             if(DataAccess.Connect())
             {
-                Application.Run(new MHThanhToan(ttdt));
+                Application.Run(new MHDangNhap());
             }
         }
     }
