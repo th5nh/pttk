@@ -38,7 +38,7 @@
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label_sdt = new System.Windows.Forms.Label();
             this.label_ngaysinh = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label_email = new System.Windows.Forms.Label();
             this.btn_dangky = new System.Windows.Forms.Button();
@@ -145,14 +145,14 @@
             this.label_ngaysinh.TabIndex = 7;
             this.label_ngaysinh.Text = "Ngày sinh";
             // 
-            // dateTimePicker1
+            // dateTimeNgaySinh
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(550, 195);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(278, 24);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimeNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeNgaySinh.Location = new System.Drawing.Point(550, 195);
+            this.dateTimeNgaySinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimeNgaySinh.Name = "dateTimeNgaySinh";
+            this.dateTimeNgaySinh.Size = new System.Drawing.Size(278, 24);
+            this.dateTimeNgaySinh.TabIndex = 8;
             // 
             // txt_email
             // 
@@ -314,7 +314,7 @@
             this.Controls.Add(this.btn_dangky);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label_email);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimeNgaySinh);
             this.Controls.Add(this.label_ngaysinh);
             this.Controls.Add(this.txt_sdt);
             this.Controls.Add(this.label_sdt);
@@ -346,7 +346,7 @@
         private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.Label label_sdt;
         private System.Windows.Forms.Label label_ngaysinh;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimeNgaySinh;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label_email;
         private System.Windows.Forms.Button btn_dangky;

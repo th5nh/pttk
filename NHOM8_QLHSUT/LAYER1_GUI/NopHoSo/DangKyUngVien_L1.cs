@@ -32,7 +32,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
             bool checkPhone = DangKyUngVien_L2.KiemTraSDT(txt_sdt.Text);
             bool checkName = DangKyUngVien_L2.KiemTraHoTen(txt_hoten.Text);
             bool checkEmail = DangKyUngVien_L2.KiemTraEmail(txt_email.Text);
-            bool checkBirth = DangKyUngVien_L2.KiemTraNgaySinh(dateTimePicker1);
+            bool checkBirth = DangKyUngVien_L2.KiemTraNgaySinh(dateTimeNgaySinh);
             bool checkAddr = !string.IsNullOrEmpty(txt_diachi.Text);
 
             tbao_mauv.Text = checkID ? string.Empty : "Mã ứng viên bắt đầu bằng 'UV' theo sau là 4 chữ số";
@@ -49,7 +49,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
 
             if (checkID && checkPhone && checkName && checkEmail && checkBirth && checkAddr)
             {
-                var dt = Convert.ToDateTime(dateTimePicker1.Value);
+                var dt = Convert.ToDateTime(dateTimeNgaySinh.Value);
                 string ngaySinh = dt.ToString("yyyy-MM-dd");
 
                 if(DangKyUngVien_L2.ThemUngVien(txt_mauv.Text, txt_hoten.Text, ngaySinh, txt_diachi.Text, txt_sdt.Text, txt_email.Text, _manv))
@@ -78,7 +78,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
             txt_sdt.Text = string.Empty;
             txt_email.Text = string.Empty;
             txt_diachi.Text = string.Empty;
-            dateTimePicker1.Value = DateTime.Now;
+            dateTimeNgaySinh.Value = DateTime.Now;
 
             tbao_mauv.Text = string.Empty;
             tbao_hoten.Text = string.Empty;

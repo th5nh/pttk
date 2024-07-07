@@ -19,7 +19,7 @@ namespace NHOM8_QLHSUT
             InitializeComponent();
         }
 
-        private void NopHoSo_L1_Load(object sender, EventArgs e)
+        private void XemTTDT_L1_Load(object sender, EventArgs e)
         {
             DataTable dt = XemTTDT_L2.ThongTinDangTuyen();
 

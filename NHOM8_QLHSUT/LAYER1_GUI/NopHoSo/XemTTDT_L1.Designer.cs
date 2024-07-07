@@ -157,7 +157,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "XemTTDT_L1";
             this.Text = "Xem thông tin đăng tuyển";
-            this.Load += new System.EventHandler(this.NopHoSo_L1_Load);
+            this.Load += new System.EventHandler(this.XemTTDT_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
