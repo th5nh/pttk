@@ -79,33 +79,20 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         }
 
 
-        //public static DataTable LayThongBaoDangTuyen()
+        //public static DataTable LayThongTinDangTuyen()
         //{
         //    try
         //    {
         //        DataTable dt = new DataTable();
-
-
-        //        string query = @"
-        //    SELECT TT.MaDT, TT.ThongTinYeuCau, TT.SLTuyenDung, TT.ViTriTuyenDung 
-        //    FROM THONGTINDANGTUYEN TT
-        //    JOIN HOADONTHANHTOAN HD ON TT.MaDN = HD.MaDT
-        //    WHERE HD.SoTienConLai = 0
-        //";
-
-      
-        //        using (SqlCommand cmd = new SqlCommand(query, _conn))
-        //        {
-        //            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-        //            sda.Fill(dt); 
-        //        }
-
-        //        return dt;  
+        //        string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
+        //        SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+        //        sda.Fill(dt);
+        //        return dt;
         //    }
         //    catch (Exception ex)
         //    {
-        //        Console.WriteLine(ex.ToString()); 
-        //        return null; 
+        //        Console.WriteLine(ex.ToString());
+        //        return null;
         //    }
         //}
 
@@ -115,15 +102,13 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             {
                 DataTable dt = new DataTable();
 
-
-                string query = "SELECT MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN  FROM THONGTINDANGTUYEN TT";
-                    
-                using (SqlCommand cmd = new SqlCommand(query, _conn))
-                {
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(dt);
-                }
-
+                string query = "SELECT TT.MaDT, MaDN, ViTriTuyenDung, SLTuyenDung, NgayBatDau, NgayKetThuc, ThongTinYeuCau "
+                + "FROM THONGTINDANGTUYEN AS TT "
+                + "JOIN HOADONTHANHTOAN AS HD "
+                + "ON TT.MaDT = HD.MaDT "
+                + "WHERE HD.SoTienConLai = 0";
+                SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
+                sda.Fill(dt);
                 return dt;
             }
             catch (Exception ex)
@@ -132,6 +117,8 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 return null;
             }
         }
+
+
     }
 }
     

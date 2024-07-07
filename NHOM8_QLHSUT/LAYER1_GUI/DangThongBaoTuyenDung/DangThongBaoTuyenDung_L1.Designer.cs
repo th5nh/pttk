@@ -139,6 +139,7 @@
             this.Controls.Add(this.label_title);
             this.Name = "DangThongBaoTuyenDung_L1";
             this.Text = "DangThongBaoTuyenDung_L1";
+            this.Load += new System.EventHandler(this.DangThongBao_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
