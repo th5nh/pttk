@@ -20,7 +20,7 @@ namespace NHOM8_QLHSUT
 
             if(DataAccess.Connect())
             {
-                Application.Run(new NopHoSo_L1());
+                Application.Run(new ManHinhDuyetHoSo());
             }
         }
     }
