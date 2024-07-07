@@ -32,10 +32,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
 
         private void btc_vtc_Click(object sender, EventArgs e)
         {
-            TrangChu trangchu = new TrangChu();
-            Hide();
-            trangchu.ShowDialog();
-            Close();
+            this.Close();
         }
     }
 }
