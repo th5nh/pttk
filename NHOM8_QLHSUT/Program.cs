@@ -1,9 +1,11 @@
 ﻿using NHOM8_QLHSUT.LAYER3_DAL;
+using NHOM8_QLHSUT.LAYER1_GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
 
 namespace NHOM8_QLHSUT
 {
@@ -20,7 +22,7 @@ namespace NHOM8_QLHSUT
 
             if(DataAccess.Connect())
             {
-                Application.Run(new ManHinhDuyetHoSo());
+                Application.Run(new MHDangNhap());
             }
         }
     }

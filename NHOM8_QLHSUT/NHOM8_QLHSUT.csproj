@@ -72,6 +72,24 @@
     <Compile Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.designer.cs">
       <DependentUpon>ManHinhDuyetHoSo.cs</DependentUpon>
     </Compile>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.Designer.cs">
+      <DependentUpon>MHDienTTDangTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER1_GUI\MHDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\MHDangNhap.Designer.cs">
+      <DependentUpon>MHDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER1_GUI\MHMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\MHMenu.Designer.cs">
+      <DependentUpon>MHMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,8 +109,34 @@
     <EmbeddedResource Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.resx">
       <DependentUpon>ManHinhDuyetHoSo.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.Designer.cs">
+      <DependentUpon>MHDSThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER2_BLL\DienTTDangTuyen\NhanVien.cs" />
+    <Compile Include="LAYER2_BLL\DienTTDangTuyen\ThongTinDangTuyen.cs" />
+    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+    <Compile Include="LAYER3_DAL\DataAccess.cs" />
+    <Compile Include="LAYER3_DAL\DBNhanVien.cs" />
+    <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LAYER1_GUI\DienTTDangTuyen\MHDienTTDangTuyen.resx">
+      <DependentUpon>MHDienTTDangTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\MHDangNhap.resx">
+      <DependentUpon>MHDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\MHMenu.resx">
+      <DependentUpon>MHMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.resx">
+      <DependentUpon>MHDSThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +146,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +164,9 @@
   <ItemGroup>
     <Folder Include="LAYER1_GUI\VanVan\" />
     <Folder Include="LAYER2_BLL\VanVan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\OIP %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
