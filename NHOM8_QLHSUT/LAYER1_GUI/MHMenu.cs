@@ -61,5 +61,14 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
 
             this.Show();
         }
+
+        private void ứngViênToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ManHinhDuyetHoSo f = new ManHinhDuyetHoSo();
+            this.Hide();
+            f.ShowDialog();
+
+            this.Show();
+        }
     }
 }

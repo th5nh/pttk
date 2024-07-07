@@ -1,6 +1,6 @@
 ﻿namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
 {
-    partial class DangThongBaoTuyenDung_L1
+    partial class MHDangThongBaoTuyenDung
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,7 @@
             this.NGAYBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.YEUCAU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btc_vtc = new System.Windows.Forms.Button();
-            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnQuaylai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DSThongTinDangTuyen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,40 +131,28 @@
             this.YEUCAU.MinimumWidth = 6;
             this.YEUCAU.Name = "YEUCAU";
             // 
-            // btc_vtc
+            // btnQuaylai
             // 
-            this.btc_vtc.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btc_vtc.Location = new System.Drawing.Point(718, 574);
-            this.btc_vtc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btc_vtc.Name = "btc_vtc";
-            this.btc_vtc.Size = new System.Drawing.Size(124, 45);
-            this.btc_vtc.TabIndex = 2;
-            this.btc_vtc.Text = "Quay lại";
-            this.btc_vtc.UseVisualStyleBackColor = false;
-            this.btc_vtc.Click += new System.EventHandler(this.btc_vtc_Click);
+            this.btnQuaylai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnQuaylai.Location = new System.Drawing.Point(865, 574);
+            this.btnQuaylai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuaylai.Name = "btnQuaylai";
+            this.btnQuaylai.Size = new System.Drawing.Size(124, 45);
+            this.btnQuaylai.TabIndex = 2;
+            this.btnQuaylai.Text = "Quay lại";
+            this.btnQuaylai.UseVisualStyleBackColor = false;
+            this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai);
             // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnXacNhan.Location = new System.Drawing.Point(862, 574);
-            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(124, 45);
-            this.btnXacNhan.TabIndex = 3;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = false;
-            // 
-            // DangThongBaoTuyenDung_L1
+            // MHDangThongBaoTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 630);
-            this.Controls.Add(this.btnXacNhan);
-            this.Controls.Add(this.btc_vtc);
+            this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.DSThongTinDangTuyen);
             this.Controls.Add(this.label_title);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "DangThongBaoTuyenDung_L1";
+            this.Name = "MHDangThongBaoTuyenDung";
             this.Text = "DangThongBaoTuyenDung_L1";
             this.Load += new System.EventHandler(this.DangThongBao_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DSThongTinDangTuyen)).EndInit();
@@ -178,7 +165,7 @@
 
         private System.Windows.Forms.Label label_title;
         private System.Windows.Forms.DataGridView DSThongTinDangTuyen;
-        private System.Windows.Forms.Button btc_vtc;
+        private System.Windows.Forms.Button btnQuaylai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MADT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MADN;
         private System.Windows.Forms.DataGridViewTextBoxColumn VITRI;
@@ -186,6 +173,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYBD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYKT;
         private System.Windows.Forms.DataGridViewTextBoxColumn YEUCAU;
-        private System.Windows.Forms.Button btnXacNhan;
     }
 }

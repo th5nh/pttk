@@ -1,11 +1,7 @@
-<!-- <<<<<<< KhanhDoan -->
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
 using NHOM8_QLHSUT.LAYER1_GUI.NopHoSo;
 using NHOM8_QLHSUT.LAYER3_DAL;
-<!-- ======= -->
-﻿using NHOM8_QLHSUT.LAYER3_DAL;
 using NHOM8_QLHSUT.LAYER1_GUI;
-<!-- >>>>>>> Huy-Merge -->
 using System;
 using System.Collections.Generic;
 using System.Linq;

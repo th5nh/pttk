@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
 {
-    public partial class DangThongBaoTuyenDung_L1 : Form
+    public partial class MHDangThongBaoTuyenDung : Form
     {
-        public DangThongBaoTuyenDung_L1()
+        public MHDangThongBaoTuyenDung()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
         }
 
 
-        private void btc_vtc_Click(object sender, EventArgs e)
+        private void btnQuaylai(object sender, EventArgs e)
         {
             this.Close();
         }
