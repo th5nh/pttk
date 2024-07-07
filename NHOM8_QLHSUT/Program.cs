@@ -1,6 +1,9 @@
+
+﻿using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan;
+using NHOM8_QLHSUT.LAYER2_BLL.ThanhToan;
+using NHOM8_QLHSUT.LAYER3_DAL;
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
 using NHOM8_QLHSUT.LAYER1_GUI.NopHoSo;
-using NHOM8_QLHSUT.LAYER3_DAL;
 using NHOM8_QLHSUT.LAYER1_GUI;
 using System;
 using System.Collections.Generic;
@@ -21,7 +24,6 @@ namespace NHOM8_QLHSUT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             if(DataAccess.Connect())
             {
                 Application.Run(new MHDangNhap());

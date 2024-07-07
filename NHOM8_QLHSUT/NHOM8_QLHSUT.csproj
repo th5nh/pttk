@@ -112,6 +112,21 @@
     <Compile Include="LAYER1_GUI\TrangChu\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LAYER1_GUI\ThanhToan\MHThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAYER1_GUI\ThanhToan\MHThanhToan.Designer.cs">
+      <DependentUpon>MHThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
+    <Compile Include="LAYER2_BLL\ThanhToan\HoaDon.cs" />
+    <Compile Include="LAYER2_BLL\ThanhToan\ThanhToan.cs" />
+    <Compile Include="LAYER2_BLL\ThanhToan\ThongTinDangTuyen.cs" />
+    <Compile Include="LAYER2_BLL\ThanhToan\Voucher.cs" />
+    <Compile Include="LAYER3_DAL\DataAccess.cs" />
+    <Compile Include="LAYER3_DAL\DBHoaDon.cs" />
+    <Compile Include="LAYER3_DAL\DBThongTinDangTuyen.cs" />
+    <Compile Include="LAYER3_DAL\DBVoucher.cs" />
     <Compile Include="LAYER1_GUI\TrangChu\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
@@ -191,6 +206,9 @@
     <!--  </EmbeddedResource> -->
     <EmbeddedResource Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.resx">
       <DependentUpon>MHDSThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAYER1_GUI\ThanhToan\MHThanhToan.resx">
+      <DependentUpon>MHThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
