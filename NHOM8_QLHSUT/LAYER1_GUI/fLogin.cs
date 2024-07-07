@@ -24,7 +24,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
         {
             data.setMaNV(txtUsername.Text);
             data.setMatKhau(txtPassword.Text);
-            if(data.loginCheck())
+            if(data.KiemTraDangNhap())
             {
                 MHMenu f = new MHMenu(txtUsername.Text);
                 this.Hide();

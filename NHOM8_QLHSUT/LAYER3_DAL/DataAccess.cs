@@ -50,8 +50,6 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
         {
             get { return _conn; }
         }
-
-
     }
 }
     

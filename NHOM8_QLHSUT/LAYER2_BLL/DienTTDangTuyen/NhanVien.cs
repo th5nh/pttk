@@ -55,7 +55,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.MatKhau = MatKhau;
         }
 
-        public bool loginCheck()
+        public bool KiemTraDangNhap()
         {
             if (this.MatKhau == db.getMatKhauNV(this.MaNV)) {
                 MessageBox.Show("Đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
