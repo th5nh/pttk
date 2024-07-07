@@ -1,6 +1,6 @@
 ﻿namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
 {
-    partial class ThanhToan_L1
+    partial class MHThanhToan
     {
         /// <summary>
         /// Required designer variable.

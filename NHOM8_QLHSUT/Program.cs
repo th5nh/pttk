@@ -23,7 +23,7 @@ namespace NHOM8_QLHSUT
             ttdt.setThongTinDangTuyen("DT0010", "Test", DateTime.Now, DateTime.Now, 1, "test", "test", "DN0001", 100000);
             if(DataAccess.Connect())
             {
-                Application.Run(new ThanhToan_L1(ttdt));
+                Application.Run(new MHThanhToan(ttdt));
             }
         }
     }

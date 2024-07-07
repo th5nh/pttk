@@ -12,21 +12,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
     public class ThanhToan
     {
        
-        public static List<Voucher> LayListVoucher(string maDT)
-        {
-            List<Voucher> vouchers = DBVoucher.LayListVoucher(maDT);
-            List<Voucher> newVouchers = new List<Voucher>();
-            foreach (Voucher i in vouchers)
-            {
-                if (i.NgayBatDau <= DateTime.Now && i.NgayKetThuc >= DateTime.Now)
-                {
-                    newVouchers.Add(i);
-                }
-            }
-            return newVouchers; 
-
-
-        }
+        
         public static bool checkThanhToan(HoaDon hoaDon, ThongTinDangTuyen dangTuyen)
         {
             if (!checkDotHoaDon(hoaDon)) return true;

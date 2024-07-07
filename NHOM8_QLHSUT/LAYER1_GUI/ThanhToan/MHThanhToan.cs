@@ -12,18 +12,18 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
 {
-    public partial class ThanhToan_L1 : Form
+    public partial class MHThanhToan : Form
     {
         // Lay Thong Tin Dang Tuyen o use case truoc
         // Tam xai string, int de Test thay cho class DangTuyen
         ThongTinDangTuyen dangTuyen = new ThongTinDangTuyen();
         HoaDon hoaDon;
         List<Voucher> vouchers = new List<Voucher>();
-        public ThanhToan_L1()
+        public MHThanhToan()
         {
             InitializeComponent();
         }
-        public ThanhToan_L1(ThongTinDangTuyen dangTuyen) // Test thay cho class DangTuyen
+        public MHThanhToan(ThongTinDangTuyen dangTuyen) // Test thay cho class DangTuyen
         {
             InitializeComponent();
             this.dangTuyen = dangTuyen;
@@ -82,7 +82,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
                 }
                 this.hoaDon = new HoaDon(this.dangTuyen, DateTime.Today);
                 if (!LAYER2_BLL.ThanhToan.ThanhToan.checkThanhToan(hoaDon, dangTuyen)) this.Dispose();    
-                this.vouchers = LAYER2_BLL.ThanhToan.ThanhToan.LayListVoucher(this.dangTuyen.MaDT);
+                this.vouchers = Voucher.LayListVoucher(this.dangTuyen.MaDT);
                 HienThiDangTuyen();
                 HienThiHinhThuc();
                 HienThiDot();

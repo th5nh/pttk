@@ -52,11 +52,11 @@
     <Compile Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.Designer.cs">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAYER1_GUI\ThanhToan\ThanhToan_L1.cs">
+    <Compile Include="LAYER1_GUI\ThanhToan\MHThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAYER1_GUI\ThanhToan\ThanhToan_L1.Designer.cs">
-      <DependentUpon>ThanhToan_L1.cs</DependentUpon>
+    <Compile Include="LAYER1_GUI\ThanhToan\MHThanhToan.Designer.cs">
+      <DependentUpon>MHThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="LAYER2_BLL\NopHoSo\NopHoSo_L2.cs" />
     <Compile Include="LAYER2_BLL\ThanhToan\HoaDon.cs" />
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="LAYER1_GUI\NopHoSo\NopHoSo_L1.resx">
       <DependentUpon>NopHoSo_L1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LAYER1_GUI\ThanhToan\ThanhToan_L1.resx">
-      <DependentUpon>ThanhToan_L1.cs</DependentUpon>
+    <EmbeddedResource Include="LAYER1_GUI\ThanhToan\MHThanhToan.resx">
+      <DependentUpon>MHThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
