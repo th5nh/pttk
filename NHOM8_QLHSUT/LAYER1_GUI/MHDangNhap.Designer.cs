@@ -122,6 +122,7 @@
             this.Name = "MHDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MHDangNhap_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

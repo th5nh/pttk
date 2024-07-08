@@ -1,5 +1,6 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

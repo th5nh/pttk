@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan;
+using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,11 +42,11 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
             {
                 data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text, 100000);
                 data.ThemTTDangTuyen(data);
-                // MHPhieuDangKyQuangCao f = new MHPhieuDangKyQuangCao(data);
-                // this.Hide();
-                // f.ShowDialog();
+                MHThanhToan f = new MHThanhToan(data);
+                this.Hide();
+                f.ShowDialog();
 
-                //this.Show();
+                this.Show();
             }
         }
     }

@@ -155,10 +155,10 @@
     <EmbeddedResource Include="LAYER1_GUI\DuyetHoSo\ManHinhDuyetHoSo.resx">
       <DependentUpon>ManHinhDuyetHoSo.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.cs">
+    <Compile Include="LAYER1_GUI\ThanhToan\MHDSThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.Designer.cs">
+    <Compile Include="LAYER1_GUI\ThanhToan\MHDSThanhToan.Designer.cs">
       <DependentUpon>MHDSThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="LAYER2_BLL\DienTTDangTuyen\NhanVien.cs" />
@@ -198,7 +198,7 @@
     <!--    <DependentUpon>NopHoSo_L1.cs</DependentUpon> -->
     <!-- >>>>>>> Huy-Merge -->
     <!--  </EmbeddedResource> -->
-    <EmbeddedResource Include="LAYER1_GUI\ThanhToan-Huy\MHDSThanhToan.resx">
+    <EmbeddedResource Include="LAYER1_GUI\ThanhToan\MHDSThanhToan.resx">
       <DependentUpon>MHDSThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LAYER1_GUI\ThanhToan\MHThanhToan.resx">

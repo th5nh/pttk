@@ -132,5 +132,15 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
         {
             return ViTriTuyenDung;
         }
+
+        public void updateTrangThaiTTDT(string[] maDTArray)
+        {
+            db.UpdateTrangThai(maDTArray);
+        }
+
+        public DataTable LayTTDTChuaDuocDang()
+        {
+            return db.GetTTDTChuaDuocDang();
+        }
     }
 }

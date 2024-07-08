@@ -27,6 +27,8 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
             if(data.KiemTraDangNhap())
             {
                 MHMenu f = new MHMenu(txtUsername.Text);
+                this.txtUsername.Text = string.Empty;
+                this.txtPassword.Text = string.Empty;
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -38,5 +40,13 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
             this.Close();
         }
 
+        private void MHDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Xác nhận thoát?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+
+            }
+        }
     }
 }

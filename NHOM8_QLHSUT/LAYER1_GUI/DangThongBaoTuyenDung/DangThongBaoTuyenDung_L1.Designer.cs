@@ -154,6 +154,7 @@
             this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // DangThongBaoTuyenDung_L1
             // 

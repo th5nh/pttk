@@ -241,5 +241,69 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             ThongTinDangTuyen ttdt = new ThongTinDangTuyen(madt, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung);
             return ttdt;
         }
+
+        //Update trạng thái thông tin đăng tuyển
+        public void UpdateTrangThai(string[] maDTArray)
+        {
+            try
+            {
+                bool isConnected = DataAccess.Connect();
+
+                if (isConnected)
+                {
+                    string maDTList = string.Join(",", maDTArray.Select(maDT => $"'{maDT}'"));
+                    string query = $"UPDATE THONGTINDANGTUYEN SET TinhTrang = N'Đã được đăng' WHERE MaDT IN ({maDTList})";
+
+                    using (SqlCommand cmd = new SqlCommand(query, DataAccess.Connection))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Cập nhật trạng thái thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Lấy các thông tin đăng tuyển chưa được đăng 
+        //Lấy tất cả  thông tin đăng tuyển chưa thanh toán het
+        public DataTable GetTTDTChuaDuocDang()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                // Kết nối đến cơ sở dữ liệu
+                bool isConnected = DataAccess.Connect();
+
+                if (isConnected)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM THONGTINDANGTUYEN WHERE TinhTrang != N'Đã được đăng'", DataAccess.Connection))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(data);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return data;
+        }
     }
 }
