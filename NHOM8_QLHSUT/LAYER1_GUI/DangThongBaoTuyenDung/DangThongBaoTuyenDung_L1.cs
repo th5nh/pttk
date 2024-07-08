@@ -1,5 +1,6 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,10 +33,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
         private void DangThongBao_L1_Load(object sender, EventArgs e)
         {
             DataTable dt = data.LayTTDTChuaDuocDang();
-            foreach (DataRow dr in dt.Rows)
-            {
-                DSThongTinDangTuyen.Rows.Add(dr.ItemArray);
-            }
+            DSThongTinDangTuyen.DataSource = dt;
             AddCheckBoxColumn("ckbSelect");
         }
 
