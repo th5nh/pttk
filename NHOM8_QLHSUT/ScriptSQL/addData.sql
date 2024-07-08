@@ -128,16 +128,16 @@ GO
 -- Inserting data into table dbo.HOADONTHANHTOAN
 --
 INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-25', 100000, 100000, 0, 1, 'DT0000', N'Thanh toán 1 đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-26', 200000, 100000, 100000, 1, 'DT0001', N'Thanh toán 1 đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-27', 300000, 100000, 200000, 2, 'DT0002', N'Thanh toán nhiều đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-28', 400000, 100000, 300000, 3, 'DT0003', N'Thanh toán nhiều đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-29', 500000, 100000, 400000, 2, 'DT0004', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-26', 100000, 100000, 0, 1, 'DT0001', N'Thanh toán 1 đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-27', 300000, 90000, 210000, 1, 'DT0002', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-28', 600000, 180000, 420000, 1, 'DT0003', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-29', 100000, 30000, 70000, 1, 'DT0004', N'Thanh toán nhiều đợt')
 INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-30', 100000, 100000, 0, 1, 'DT0005', N'Thanh toán 1 đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-05-01', 100000, 100000, 0, 2, 'DT0006', N'Thanh toán nhiều đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-25', 100000, 100000, 0, 3, 'DT0007', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-05-01', 300000, 90000, 210000, 1, 'DT0006', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-25', 300000, 90000, 210000, 1, 'DT0007', N'Thanh toán nhiều đợt')
 INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-26', 100000, 100000, 0, 1, 'DT0008', N'Thanh toán 1 đợt')
 INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-27', 100000, 100000, 0, 1, 'DT0009', N'Thanh toán 1 đợt')
-INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-28', 100000, 100000, 0, 2, 'DT0010', N'Thanh toán nhiều đợt')
+INSERT dbo.HOADONTHANHTOAN(NgayLap, SoTienCanThanhToan, SoTienDaThanhToan, SoTienConLai, DotThanhToan, MaDT, HinhThucThanhToan) VALUES ('2024-04-28', 300000, 90000, 210000, 1, 'DT0010', N'Thanh toán nhiều đợt')
 GO
 
 --

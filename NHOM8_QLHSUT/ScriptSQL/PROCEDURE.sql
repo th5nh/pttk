@@ -1,5 +1,5 @@
-﻿
-
+﻿use QLHOSOUNGTUYEN
+go
 
 DROP FUNCTION IF EXISTS f_AutoMaTTDT
 GO
@@ -30,30 +30,16 @@ CREATE PROCEDURE SP_THEM_TTDANGTUYEN
 	@SoLuongTuyenDung INT,
 	@ViTriTuyenDung NVARCHAR(50),
 	@HinhThucDangTuyen NVARCHAR(50),
-	@MaDN VARCHAR(6)
+	@MaDN VARCHAR(6),
+	@GiaTien VARCHAR(6)
 AS
 BEGIN
 		DECLARE @MaDT VARCHAR(6);
 		SET @MaDT = dbo.f_AutoMaTTDT();
-		INSERT INTO THONGTINDANGTUYEN(MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN)
-		VALUES(@MaDT, @TTYeuCau, @NgayBatDau, @NgayKetThuc, @SoLuongTuyenDung, @ViTriTuyenDung, @HinhThucDangTuyen, @MaDN);
+		INSERT INTO THONGTINDANGTUYEN(MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN, GiaTien)
+		VALUES(@MaDT, @TTYeuCau, @NgayBatDau, @NgayKetThuc, @SoLuongTuyenDung, @ViTriTuyenDung, @HinhThucDangTuyen, @MaDN, @GiaTien);
 END 
 GO
-
-SELECT * FROM THANHVIEN
-
-EXEC SP_THEM_TTDANGTUYEN 
-    @TTYeuCau = N'Trình độ chuyên môn cao, kỹ năng lập trình tốt', 
-    @NgayBatDau = '2024-07-01', 
-    @NgayKetThuc = '2024-07-31', 
-    @SoLuongTuyenDung = 5, 
-    @ViTriTuyenDung = N'Lập trình viên', 
-    @HinhThucDangTuyen = N'Toàn thời gian', 
-    @MaDN = 'DN0001';
-
-SELECT * FROM THONGTINDANGTUYEN
-
-DELETE FROM THONGTINDANGTUYEN WHERE MADT = 'DT0018'
 
 
 DROP PROCEDURE IF EXISTS GET_MATKHAU_NHANVIEN
@@ -70,10 +56,3 @@ GO
 
 EXEC GET_MATKHAU_NHANVIEN @USERNAME = 'NV0001'
 GO
-
-ALTER TABLE NHANVIEN
-ADD MATKHAU VARCHAR(40)
-
-SELECT * FROM NHANVIEN
-
-SELECT * FROM THONGTINDANGTUYEN
