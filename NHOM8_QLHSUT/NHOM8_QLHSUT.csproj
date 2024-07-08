@@ -141,7 +141,6 @@
     <Compile Include="LAYER1_GUI\NopHoSo\XemTTDT_L1.Designer.cs">
       <DependentUpon>XemTTDT_L1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAYER2_BLL\DangThongBaoTuyenDung\DangThongBaoTuyenDung_L2.cs" />
     <Compile Include="LAYER2_BLL\NopHoSo\DangKyUngVien_L2.cs" />
     <Compile Include="LAYER2_BLL\NopHoSo\XemTTDT_L2.cs" />
     <!-- ======= -->
@@ -229,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LAYER1_GUI\VanVan\" />
-    <Folder Include="LAYER2_BLL\VanVan\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\OIP %281%29.jpg" />

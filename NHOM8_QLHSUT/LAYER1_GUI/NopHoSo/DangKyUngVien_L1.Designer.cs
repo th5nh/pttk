@@ -312,6 +312,7 @@
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.groupBox1);
             this.Name = "DangKyUngVien_L1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký ứng viên";
             this.Load += new System.EventHandler(this.DangKyUngVien_L1_Load);
             this.ResumeLayout(false);

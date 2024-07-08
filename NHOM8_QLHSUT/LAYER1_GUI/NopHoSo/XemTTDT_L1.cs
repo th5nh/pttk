@@ -32,10 +32,7 @@ namespace NHOM8_QLHSUT
 
         private void btn_trangchu_Click(object sender, EventArgs e)
         {
-            TrangChu trangchu = new TrangChu();
-            Hide();
-            trangchu.ShowDialog();
-            Close();
+            this.Close();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung;
 using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER1_GUI.NopHoSo;
 using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan_Huy;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using System;
@@ -78,6 +79,32 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
             this.Hide();
             f.ShowDialog();
 
+            this.Show();
+        }
+
+        private void danhSáchVịTríToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XemTTDT_L1 f = new XemTTDT_L1();
+            this.Hide();
+            f.ShowDialog();
+
+            this.Show();
+        }
+
+        private void ứngViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DangKyUngVien_L1 f = new DangKyUngVien_L1();
+            this.Hide();
+            f.ShowDialog();
+
+            this.Show();
+        }
+
+        private void ứngTuyểnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GhiNhanPhieuUngTuyen_L1 f = new GhiNhanPhieuUngTuyen_L1();
+            this.Hide(); 
+            f.ShowDialog();
             this.Show();
         }
     }

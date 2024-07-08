@@ -1,5 +1,4 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
-using NHOM8_QLHSUT.LAYER2_BLL.DangThongBaoTuyenDung;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using System;
 using System.Collections.Generic;
