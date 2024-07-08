@@ -53,7 +53,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.ThanhToan
         {
             // Tinh theo dot
             int tien = dangTuyen.Tien;
-            if (this.hinhThucTT == "1 Đợt")
+            if (this.hinhThucTT == "Thanh toán 1 đợt")
             {
                 if (voucher == null)
                 {

@@ -1,4 +1,5 @@
 ﻿using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER1_GUI.ThanhToan;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
@@ -59,7 +60,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan_Huy
 
                 MessageBox.Show(data_2.getViTri());
 
-                MHDienTTDangTuyen f = new MHDienTTDangTuyen();
+                MHThanhToan f = new MHThanhToan(data_2);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

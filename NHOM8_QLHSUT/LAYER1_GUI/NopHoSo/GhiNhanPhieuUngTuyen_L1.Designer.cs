@@ -45,15 +45,16 @@
             this.label_vitri = new System.Windows.Forms.Label();
             this.txt_vitri = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_hoso = new System.Windows.Forms.TextBox();
             this.label_hoso = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_chungtu = new System.Windows.Forms.TextBox();
             this.label_chungtu = new System.Windows.Forms.Label();
             this.cb_tinhtrang = new System.Windows.Forms.ComboBox();
             this.label_tinhtrang = new System.Windows.Forms.Label();
             this.txt_bangcap = new System.Windows.Forms.TextBox();
             this.label_bangcap = new System.Windows.Forms.Label();
             this.btn_ghinhan = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,7 +75,7 @@
             this.btn_trangchu.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_trangchu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_trangchu.Location = new System.Drawing.Point(333, 449);
+            this.btn_trangchu.Location = new System.Drawing.Point(286, 449);
             this.btn_trangchu.Name = "btn_trangchu";
             this.btn_trangchu.Size = new System.Drawing.Size(149, 43);
             this.btn_trangchu.TabIndex = 18;
@@ -146,6 +147,7 @@
             this.cb_mauv.Name = "cb_mauv";
             this.cb_mauv.Size = new System.Drawing.Size(267, 28);
             this.cb_mauv.TabIndex = 26;
+            this.cb_mauv.SelectedIndexChanged += new System.EventHandler(this.cb_mauv_SelectedIndexChanged_1);
             // 
             // label_hoten
             // 
@@ -191,6 +193,7 @@
             this.cb_madt.Name = "cb_madt";
             this.cb_madt.Size = new System.Drawing.Size(267, 28);
             this.cb_madt.TabIndex = 29;
+            this.cb_madt.SelectedIndexChanged += new System.EventHandler(this.cb_madt_SelectedIndexChanged_1);
             // 
             // txt_madn
             // 
@@ -234,9 +237,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txt_hoso);
             this.groupBox3.Controls.Add(this.label_hoso);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txt_chungtu);
             this.groupBox3.Controls.Add(this.label_chungtu);
             this.groupBox3.Controls.Add(this.cb_tinhtrang);
             this.groupBox3.Controls.Add(this.label_tinhtrang);
@@ -250,14 +253,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Yêu cầu ứng tuyển";
             // 
-            // textBox2
+            // txt_hoso
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(26, 269);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 51);
-            this.textBox2.TabIndex = 38;
+            this.txt_hoso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_hoso.Location = new System.Drawing.Point(26, 269);
+            this.txt_hoso.Multiline = true;
+            this.txt_hoso.Name = "txt_hoso";
+            this.txt_hoso.Size = new System.Drawing.Size(267, 51);
+            this.txt_hoso.TabIndex = 38;
             // 
             // label_hoso
             // 
@@ -269,14 +272,14 @@
             this.label_hoso.TabIndex = 37;
             this.label_hoso.Text = "Hồ sơ";
             // 
-            // textBox1
+            // txt_chungtu
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(140, 189);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 51);
-            this.textBox1.TabIndex = 36;
+            this.txt_chungtu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_chungtu.Location = new System.Drawing.Point(140, 189);
+            this.txt_chungtu.Multiline = true;
+            this.txt_chungtu.Name = "txt_chungtu";
+            this.txt_chungtu.Size = new System.Drawing.Size(153, 51);
+            this.txt_chungtu.TabIndex = 36;
             // 
             // label_chungtu
             // 
@@ -331,7 +334,7 @@
             this.btn_ghinhan.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_ghinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ghinhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ghinhan.Location = new System.Drawing.Point(532, 449);
+            this.btn_ghinhan.Location = new System.Drawing.Point(635, 449);
             this.btn_ghinhan.Name = "btn_ghinhan";
             this.btn_ghinhan.Size = new System.Drawing.Size(149, 43);
             this.btn_ghinhan.TabIndex = 26;
@@ -339,11 +342,25 @@
             this.btn_ghinhan.UseVisualStyleBackColor = false;
             this.btn_ghinhan.Click += new System.EventHandler(this.btn_ghinhan_Click);
             // 
+            // btn_huy
+            // 
+            this.btn_huy.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_huy.Location = new System.Drawing.Point(459, 449);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(149, 43);
+            this.btn_huy.TabIndex = 27;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click_1);
+            // 
             // GhiNhanPhieuUngTuyen_L1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 504);
+            this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_ghinhan);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -353,6 +370,7 @@
             this.Name = "GhiNhanPhieuUngTuyen_L1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ghi nhận phiếu đăng ký ứng tuyển";
+            this.Load += new System.EventHandler(this.GhiNhanPhieuUngTuyen_L1_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -387,10 +405,11 @@
         private System.Windows.Forms.TextBox txt_bangcap;
         private System.Windows.Forms.Button btn_ghinhan;
         private System.Windows.Forms.Label label_hoso;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_chungtu;
         private System.Windows.Forms.Label label_chungtu;
         private System.Windows.Forms.ComboBox cb_tinhtrang;
         private System.Windows.Forms.Label label_tinhtrang;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_hoso;
+        private System.Windows.Forms.Button btn_huy;
     }
 }

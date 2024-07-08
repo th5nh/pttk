@@ -97,7 +97,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             this.ViTriTuyenDung = dt["ViTriTuyenDung"].ToString();
             this.HinhThucDangTuyen = dt["HinhThucDangTuyen"].ToString();
             this.MaDN = dt["MaDN"].ToString();
-
+            this.Tien = Int32.Parse(dt["GiaTien"].ToString()) ;
         }
 
         public void CopyFrom(ThongTinDangTuyen other)
@@ -115,6 +115,7 @@ namespace NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen
             ViTriTuyenDung = other.ViTriTuyenDung;
             HinhThucDangTuyen = other.HinhThucDangTuyen;
             MaDN = other.MaDN;
+            Tien = other.Tien;
         }
 
         public bool EmptyFieldCheck()

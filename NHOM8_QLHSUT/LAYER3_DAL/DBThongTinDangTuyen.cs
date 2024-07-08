@@ -62,6 +62,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                         cmd.Parameters.AddWithValue("@ViTriTuyenDung", data.ViTriTuyenDung);
                         cmd.Parameters.AddWithValue("@HinhThucDangTuyen", data.HinhThucDangTuyen);
                         cmd.Parameters.AddWithValue("@MaDN", data.MaDN);
+                        cmd.Parameters.AddWithValue("@GiaTien", data.Tien);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Thêm thông tin đăng tuyển thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -145,7 +146,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
 
                 if (isConnected)
                 {
-                    using (SqlCommand cmd = new SqlCommand("SELECT TTDT.MADT, TTDT.NgayBatDau, TTDT.NgayKetThuc, TTDT.MaDN, HDTT.SoTienCanThanhToan, HDTT.SoTienDaThanhToan, HDTT.SoTienConLai, HDTT.DotThanhToan\r\nFROM THONGTINDANGTUYEN TTDT JOIN HOADONTHANHTOAN HDTT ON TTDT.MADT = HDTT.MADT\r\nWHERE HDTT.MADT NOT IN (SELECT HDTT.MADT \r\n\t\t\t\t\t\tFROM HOADONTHANHTOAN JOIN THONGTINDANGTUYEN TTDT ON TTDT.MADT = HDTT.MADT\r\n\t\t\t\t\t\tWHERE HDTT.SoTienConLai = 0)", DataAccess.Connection))
+                    using (SqlCommand cmd = new SqlCommand("SELECT DISTINCT(TTDT.MADT), TTDT.NgayBatDau, TTDT.NgayKetThuc, TTDT.MaDN\r\nFROM THONGTINDANGTUYEN TTDT JOIN HOADONTHANHTOAN HDTT ON TTDT.MADT = HDTT.MADT \r\nWHERE HDTT.MADT NOT IN (SELECT HDTT.MADT \r\n\t\t\t\t\t\tFROM HOADONTHANHTOAN HDTT JOIN THONGTINDANGTUYEN TTDT ON TTDT.MADT = HDTT.MADT \r\n\t\t\t\t\t\tWHERE HDTT.SoTienConLai <= 0)", DataAccess.Connection))
                     {
                         cmd.CommandType = CommandType.Text;
 

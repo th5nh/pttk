@@ -23,10 +23,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
 
         private void btn_trangchu_Click(object sender, EventArgs e)
         {
-            TrangChu trangchu = new TrangChu();
-            Hide();
-            trangchu.ShowDialog();
-            Close();
+            this.Close();
         }
 
         private void btn_ghinhan_Click(object sender, EventArgs e)
@@ -65,21 +62,6 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
 
         }
 
-        private void GhiNhanPhieuUngTuyen_L1_Load(object sender, EventArgs e)
-        {
-            DataTable dtUV = GhiNhanPhieuUngTuyen_L2.ThongTinUngVien();
-            cb_mauv.DataSource = dtUV;
-            cb_mauv.DisplayMember = "MAUV";
-            cb_mauv.ValueMember = "MAUV";
-
-            DataTable dtDT = GhiNhanPhieuUngTuyen_L2.ThongTinDangTuyen();
-            cb_madt.DataSource = dtDT;
-            cb_madt.DisplayMember = "MADT";
-            cb_madt.ValueMember = "MADT";
-
-            btn_huy_Click(sender, e);
-        }
-
         private void cb_mauv_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dtUV = GhiNhanPhieuUngTuyen_L2.ThongTinUngVien();
@@ -93,20 +75,49 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.NopHoSo
             }
         }
 
-        private void cb_madt_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void GhiNhanPhieuUngTuyen_L1_Load_1(object sender, EventArgs e)
         {
+            DataTable dtUV = GhiNhanPhieuUngTuyen_L2.ThongTinUngVien();
+            cb_mauv.DataSource = dtUV;
+            cb_mauv.DisplayMember = "MAUV";
+            cb_mauv.ValueMember = "MAUV";
+
             DataTable dtDT = GhiNhanPhieuUngTuyen_L2.ThongTinDangTuyen();
-            foreach (DataRow dr in dtDT.Rows)
+            cb_madt.DataSource = dtDT;
+            cb_madt.DisplayMember = "MADT";
+            cb_madt.ValueMember = "MADT";
+
+            btn_huy_Click_1(sender, e);
+        }
+
+        private void cb_mauv_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            DataTable dtUV = GhiNhanPhieuUngTuyen_L2.ThongTinUngVien();
+            foreach (DataRow dr in dtUV.Rows)
             {
-                if (dr["MADT"].ToString() == cb_madt.Text)
+                if (dr["MAUV"].ToString() == cb_mauv.Text)
                 {
-                    txt_vitri.Text = dr["ViTriTuyenDung"].ToString();
-                    txt_madn.Text = dr["MADN"].ToString();
+                    txt_hoten.Text = dr["HOTEN"].ToString();
+                    txt_ngaysinh.Text = Convert.ToDateTime(dr["NGAYSINH"]).ToString("dd/MM/yyyy");
                 }
             }
         }
 
-        private void btn_huy_Click(object sender, EventArgs e)
+        private void cb_madt_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            DataTable dtDT = GhiNhanPhieuUngTuyen_L2.ThongTinDangTuyen();
+            foreach (DataRow dr in dtDT.Rows)
+            {
+                if (dr["MaDT"].ToString() == cb_madt.Text)
+                {
+                    txt_vitri.Text = dr["ViTriTuyenDung"].ToString();
+                    txt_madn.Text = dr["MaDN"].ToString();
+                }
+            }
+        }
+
+        private void btn_huy_Click_1(object sender, EventArgs e)
         {
             cb_mauv.SelectedIndex = -1;
             cb_madt.SelectedIndex = -1;

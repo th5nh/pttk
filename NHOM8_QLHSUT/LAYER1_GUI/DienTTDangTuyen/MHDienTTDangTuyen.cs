@@ -27,6 +27,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
             
         }
 
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,19 +35,22 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {  
-            if(txtMaDT.Text == null || txtThongTinYC.Text == null | txtNgayBD.Value == null || txtNgayKT.Value == null || txtSoLuong.Text.Length <= 0 || txtViTri.Text == null || txtHinhThuc.Text == null || txtMaDN.Text == null)
+            if(txtMaDT.Text == null || txtThongTinYC.Text == null | txtNgayBD.Value == null || txtNgayKT.Value == null || txtSoLuong.Text.Length <= 0 || txtViTri.Text == null || txtHinhThuc.Text == null || txtMaDN.Text == null || txtGiaTien == null)
             {
                 MessageBox.Show("Không được để trống các thông tin");
             }
             else
             {
-                data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text, 100000);
+                data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text, Int32.Parse(txtGiaTien.Text));
                 data.ThemTTDangTuyen(data);
                 MHThanhToan f = new MHThanhToan(data);
                 this.Hide();
                 f.ShowDialog();
 
                 this.Show();
+                MHDienTTDangTuyen form = new MHDienTTDangTuyen();
+                this.Dispose();
+                form.ShowDialog();
             }
         }
     }

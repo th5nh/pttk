@@ -27,7 +27,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
         public MHThanhToan(ThongTinDangTuyen dangTuyen) // Test thay cho class DangTuyen
         {
             InitializeComponent();
-            this.dangTuyen = dangTuyen;
+            this.dangTuyen.CopyFrom(dangTuyen);
         }
         void HienThiVoucher()
         {
@@ -66,8 +66,8 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
             TimeSpan span = this.dangTuyen.NgayKT - this.dangTuyen.NgayBD;
             if (span.Days < 30)
             {
-                cbbHinhThucThanhToan.Text = "1 Đợt";
-                hoaDon.HinhThucTT = "1 Đợt";
+                cbbHinhThucThanhToan.Text = "Thanh toán 1 đợt";
+                hoaDon.HinhThucTT = "Thanh toán 1 đợt";
                 lbHinhThucThanhToan.Enabled = false;
                 cbbHinhThucThanhToan.Enabled = false;
             }    

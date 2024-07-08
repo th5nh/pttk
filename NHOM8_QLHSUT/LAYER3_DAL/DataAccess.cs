@@ -51,7 +51,7 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
             try
             {
                 DataTable dt = new DataTable();
-                string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung FROM THONGTINDANGTUYEN";
+                string query = "SELECT MaDT, ThongTinYeuCau, SLTuyenDung, ViTriTuyenDung, MaDN FROM THONGTINDANGTUYEN";
                 SqlDataAdapter sda = new SqlDataAdapter(query, _conn);
                 sda.Fill(dt);
                 return dt;
@@ -294,15 +294,16 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 cmd.Parameters.AddWithValue("@tienCanThanhToan", hoaDon.TienCanThanhToan);
                 cmd.Parameters.AddWithValue("@tienDahanhToan", hoaDon.TienDaThanhToan);
                 cmd.Parameters.AddWithValue("@tienConLai", hoaDon.TienConLai);
-                if (hoaDon.Voucher == null)
+                if (hoaDon.Voucher == null || string.IsNullOrEmpty(hoaDon.Voucher.MaCL))
                 {
                     cmd.Parameters.AddWithValue("@maCL", DBNull.Value);
                 }
-                else 
+                else
                 {
                     cmd.Parameters.AddWithValue("@maCL", hoaDon.Voucher.MaCL);
                 }
-                if (hoaDon.MaThe == "") 
+
+                if (string.IsNullOrEmpty(hoaDon.MaThe))
                 {
                     cmd.Parameters.AddWithValue("@maThe", DBNull.Value);
                 }
@@ -310,7 +311,9 @@ namespace NHOM8_QLHSUT.LAYER3_DAL
                 {
                     cmd.Parameters.AddWithValue("@maThe", hoaDon.MaThe);
                 }
+
                 cmd.Parameters.AddWithValue("@hinhThucThanhToan", hoaDon.HinhThucTT);
+
                 int count = cmd.ExecuteNonQuery();
                 MessageBox.Show("Rows affected: " + count);
                 return hoaDon;
