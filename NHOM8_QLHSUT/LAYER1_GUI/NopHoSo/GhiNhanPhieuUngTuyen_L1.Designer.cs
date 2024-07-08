@@ -295,6 +295,12 @@
             // 
             this.cb_tinhtrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tinhtrang.FormattingEnabled = true;
+            this.cb_tinhtrang.Items.AddRange(new object[] {
+            "Không đủ điều kiện",
+            "Đủ điều kiện",
+            "Đã xử lý",
+            "Đạt",
+            "Không Đạt "});
             this.cb_tinhtrang.Location = new System.Drawing.Point(140, 135);
             this.cb_tinhtrang.Name = "cb_tinhtrang";
             this.cb_tinhtrang.Size = new System.Drawing.Size(153, 28);
