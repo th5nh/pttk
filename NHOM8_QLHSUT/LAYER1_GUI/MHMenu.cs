@@ -33,6 +33,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI
             txtNgaySinh.Text = nv.NgaySinh.ToString();
             txtSDT.Text = nv.SDT;
             txtChucVu.Text = nv.ChucVu;
+            txtVaiTro.Text = nv.ChucVu;
             txtUsername.Text = nv.MaNV;                                                                                                                                                                                                                                                                  
         }
 
