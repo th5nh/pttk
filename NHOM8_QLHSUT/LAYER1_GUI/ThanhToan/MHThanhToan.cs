@@ -19,15 +19,17 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
         // Tam xai string, int de Test thay cho class DangTuyen
         ThongTinDangTuyen dangTuyen = new ThongTinDangTuyen();
         HoaDon hoaDon;
+        int loaiThanhToan = -1;
         List<Voucher> vouchers = new List<Voucher>();
         public MHThanhToan()
         {
             InitializeComponent();
         }
-        public MHThanhToan(ThongTinDangTuyen dangTuyen) // Test thay cho class DangTuyen
+        public MHThanhToan(ThongTinDangTuyen dangTuyen, int chucNang) // Test thay cho class DangTuyen
         {
             InitializeComponent();
             this.dangTuyen.CopyFrom(dangTuyen);
+            this.loaiThanhToan = chucNang;
         }
         void HienThiVoucher()
         {
@@ -132,6 +134,10 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             this.hoaDon.MaThe = txtMaThe.Text;
+            if(loaiThanhToan == 0) 
+            {
+                dangTuyen.ThemTTDangTuyen(dangTuyen);
+            }
             HoaDon.ThemHoaDon(hoaDon);
             this.Dispose();
         }

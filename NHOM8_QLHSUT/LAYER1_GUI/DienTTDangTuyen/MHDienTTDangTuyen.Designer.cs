@@ -48,8 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.txtGiaTien = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,8 +66,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txtGiaTien);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtThongTinYC);
@@ -265,24 +261,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtGiaTien
-            // 
-            this.txtGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGiaTien.Location = new System.Drawing.Point(614, 192);
-            this.txtGiaTien.Name = "txtGiaTien";
-            this.txtGiaTien.Size = new System.Drawing.Size(340, 27);
-            this.txtGiaTien.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(509, 192);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 25);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Giá tiền";
-            // 
             // MHDienTTDangTuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,7 +303,5 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtGiaTien;
-        private System.Windows.Forms.Label label10;
     }
 }

@@ -35,15 +35,11 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {  
-            if(txtMaDT.Text == null || txtThongTinYC.Text == null | txtNgayBD.Value == null || txtNgayKT.Value == null || txtSoLuong.Text.Length <= 0 || txtViTri.Text == null || txtHinhThuc.Text == null || txtMaDN.Text == null || txtGiaTien == null)
+            bool check = data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, txtSoLuong.Text, txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text);
+            if (check)
             {
-                MessageBox.Show("Không được để trống các thông tin");
-            }
-            else
-            {
-                data.setThongTinDangTuyen(txtMaDT.Text, txtThongTinYC.Text, txtNgayBD.Value, txtNgayKT.Value, int.Parse(txtSoLuong.Text), txtViTri.Text, txtHinhThuc.Text, txtMaDN.Text, Int32.Parse(txtGiaTien.Text));
-                data.ThemTTDangTuyen(data);
-                MHThanhToan f = new MHThanhToan(data);
+               // data.ThemTTDangTuyen(data);
+                MHThanhToan f = new MHThanhToan(data, 0);
                 this.Hide();
                 f.ShowDialog();
 
