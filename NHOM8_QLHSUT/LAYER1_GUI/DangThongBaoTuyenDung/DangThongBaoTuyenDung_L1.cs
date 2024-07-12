@@ -1,4 +1,5 @@
-﻿using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
+﻿using NHOM8_QLHSUT.LAYER1_GUI.DienTTDangTuyen;
+using NHOM8_QLHSUT.LAYER1_GUI.ManHinhChinh;
 using NHOM8_QLHSUT.LAYER2_BLL.DienTTDangTuyen;
 using NHOM8_QLHSUT.LAYER3_DAL;
 using System;
@@ -62,6 +63,9 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.DangThongBaoTuyenDung
             if (selectedMaDTArray.Length > 0)
             {
                 data.updateTrangThaiTTDT(selectedMaDTArray);
+                DangThongBaoTuyenDung_L1 form = new DangThongBaoTuyenDung_L1();
+                this.Dispose();
+                form.ShowDialog();
             }
             else
             {

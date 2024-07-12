@@ -289,6 +289,7 @@
             this.Controls.Add(this.lbHinhThucThanhToan);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MHThanhToan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThanhToan_L1";
             this.Load += new System.EventHandler(this.ThanhToan_L1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtDangTuyen)).EndInit();
