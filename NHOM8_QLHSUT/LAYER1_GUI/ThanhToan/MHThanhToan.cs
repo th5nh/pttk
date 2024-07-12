@@ -160,5 +160,10 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan
             this.hoaDon.Voucher = voucher;
             HienThiTien(tien);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

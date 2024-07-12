@@ -85,6 +85,7 @@ namespace NHOM8_QLHSUT.LAYER1_GUI.ThanhToan_Huy
                 txtSoLuong.Text = data_2.SoLuongTuyenDung.ToString();
                 txtViTri.Text = data_2.ViTriTuyenDung;
                 txtThongTinYeuCau.Text = data_2.ThongTinYeuCau;
+                txtGiaTien.Text = data_2.Tien.ToString();
             }
         }
     }

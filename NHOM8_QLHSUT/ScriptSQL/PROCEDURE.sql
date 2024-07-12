@@ -31,13 +31,13 @@ CREATE PROCEDURE SP_THEM_TTDANGTUYEN
 	@ViTriTuyenDung NVARCHAR(50),
 	@HinhThucDangTuyen NVARCHAR(50),
 	@MaDN VARCHAR(6),
-	@GiaTien VARCHAR(6)
+	@GiaTien INT
 AS
 BEGIN
 		DECLARE @MaDT VARCHAR(6);
 		SET @MaDT = dbo.f_AutoMaTTDT();
-		INSERT INTO THONGTINDANGTUYEN(MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN, GiaTien)
-		VALUES(@MaDT, @TTYeuCau, @NgayBatDau, @NgayKetThuc, @SoLuongTuyenDung, @ViTriTuyenDung, @HinhThucDangTuyen, @MaDN, @GiaTien);
+		INSERT INTO THONGTINDANGTUYEN(MaDT, ThongTinYeuCau, NgayBatDau, NgayKetThuc, SLTuyenDung, ViTriTuyenDung, HinhThucDangTuyen, MaDN, GiaTien, TinhTrang)
+		VALUES(@MaDT, @TTYeuCau, @NgayBatDau, @NgayKetThuc, @SoLuongTuyenDung, @ViTriTuyenDung, @HinhThucDangTuyen, @MaDN, @GiaTien, N'Chưa được đăng');
 END 
 GO
 
